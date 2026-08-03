@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave+Display&display=swap');
+:root
+{
+    --bg-black-900:#f2f2f2;
+    --bg-black-100:#fdf9ff;
+    --bg-black-50:#e8dfec;
+    --text-black-900:#302e4d;
+    --text-black-700:#504e70;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+::before,::after
+{
+    box-sizing: border-box;
+}
+ul
+{
+    list-style: none;
+}
+.section
+{
+    min-height: 100vh;
+    background: var(--bg-black-900);
+    display: block;
+    padding: 0 30px;
+    opacity: 1;
+}
+.main-content
+{
+    padding-left: 270px;
+}
+.padd-15
+{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.container
+{
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+}
+.row
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+}
+.btn
+{
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px 35px;
+    color: white;
+    border-radius: 40px;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    background: var(--skin-color);
+    transition: all 0.3s ease;
+}
+.btn:hover
+{
+    transform: translateY(-3px);
+}
+/* aside */
+.aside
+{
+    width: 270px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px;
+    height: 100%;
+    z-index: 10;
+    background: var(--bg-black-100);
+    border-right: 1px solid var(--bg-black-50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.aside .logo
+{
+    position: absolute;
+    top: 35px;
+    font-size: 25px;
+    text-transform: capitalize;
+}
+.aside .logo a
+{
+    color: var(--text-black-900);
+    font-weight: 700;
+    padding: 15px 20px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    position: relative;
+    font-family: 'Sedgwick Ave Display', cursive;
+}
+.aside .logo a::before
+{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-bottom: 5px solid var(--skin-color); 
+    border-left: 5px solid var(--skin-color);
+    bottom: 0;
+    left: 0;
+}
+.aside .logo a::after
+{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid var(--skin-color); 
+    border-right: 5px solid var(--skin-color);
+    top: 0;
+    right: 0;
+}
+.aside .nav-toggler
+{
+    position: fixed;
+    top: 20px;
+    left: 300px;
+    width: 45px;
+    height: 40px;
+    border: 1px solid var(--bg-black-50);
+    background: var(--bg-black-100);
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.aside .nav-toggler span
+{
+    width: 18px;
+    height: 2px;
+    background: var(--skin-color);
+    display: inline-block;
+    position: relative;
+}
+.aside .nav-toggler span::before
+{
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    background: var(--skin-color);
+    top: -6px;  
+    left: 0;
+}
+.aside .nav-toggler span::after
+{
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    background: var(--skin-color);
+    top: 6px;
+}
+.aside .nav
+{
+    margin-top: 120px;
+}
+.aside .nav li
+{
+    margin-bottom: 20px;
+    display: block;
+
+}
+.aside .nav li a
+{
+    color: var(--text-black-900);
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    border-bottom: 1px solid var(--bg-black-50);
+    padding: 5px 15px;
+}
+.aside .nav li a.active
+{
+    color: var(--skin-color);
+}
+.aside .nav li a i
+{
+    margin-right: 15px;
+}
+
+/* Home */
+.home
+{
+    display: flex;
+    min-height: 100vh;
+    color: var(--text-black-900);
+}
+.home .home-info
+{
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+h3.hello
+{
+    font-size: 25px;
+    margin: 15px 0;
+}
+h3.hello span
+{
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--skin-color);
+}
+h3.my-profession
+{
+    font-size: 20px;
+    margin: 15px 0;
+}
+.typing
+{
+    color: var(--skin-color);
+}
+.home .home-info p
+{
+    font-size: 15px;
+    margin-bottom: 70px;
+    color: var(--text-black-700);
+}
+.home .home-img
+{
+    flex: 0 0 40%;
+    max-width: 40%;
+    text-align: center;
+    position: relative;
+}
+.home-img::after
+{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 5px;
+    border-bottom: 10px solid var(--skin-color);
+    border-right: 10px solid var(--skin-color);
+    bottom: 40px;
+}
+.home-img::before
+{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: -10px;
+    border-top: 10px solid var(--skin-color);
+    border-left: 10px solid var(--skin-color);
+    top: -40px;
+}
+.home .home-img img
+{
+    height: 300px;
+    margin: auto;
+    border-radius: 5px;
+}
+.social-links
+{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.social-links a
+{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--bg-black-100);
+    color: var(--skin-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+
+    transition: .3s ease;
+}
+
+.social-links a:hover
+{
+    background: var(--skin-color);
+    color: white;
+    transform: translateY(-5px);
+}
