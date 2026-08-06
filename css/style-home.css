@@ -1,0 +1,107 @@
+/* Home */
+.home
+{
+    display: flex;
+    min-height: 100vh;
+    color: var(--text-black-900);
+}
+.home .home-info
+{
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+h3.hello
+{
+    font-size: 25px;
+    margin: 15px 0;
+}
+h3.hello span
+{
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--skin-color);
+}
+h3.my-profession
+{
+    font-size: 20px;
+    margin: 15px 0;
+}
+.typing
+{
+    color: var(--skin-color);
+}
+.home .home-info p
+{
+    font-size: 15px;
+    margin-bottom: 70px;
+    color: var(--text-black-700);
+}
+.home .home-img
+{
+    flex: 0 0 40%;
+    max-width: 40%;
+    text-align: center;
+    position: relative;
+}
+.home-img::after
+{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 5px;
+    border-bottom: 10px solid var(--skin-color);
+    border-right: 10px solid var(--skin-color);
+    bottom: 40px;
+}
+.home-img::before
+{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: -10px;
+    border-top: 10px solid var(--skin-color);
+    border-left: 10px solid var(--skin-color);
+    top: -40px;
+}
+.home .home-img img
+{
+    height: 300px;
+    margin: auto;
+    border-radius: 5px;
+}
+.social-links
+{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.social-links a
+{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--bg-black-100);
+    color: var(--skin-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+
+    transition: .3s ease;
+}
+
+.social-links a:hover
+{
+    background: var(--skin-color);
+    color: white;
+    transform: translateY(-5px);
+}
