@@ -653,7 +653,313 @@
                 </div>
             </section>
             <!-- ===== Skills Section End ===== -->
-            
+            <!-- ===== Portfolio Section Start ===== -->
+            <section class="portfolio section" id="portfolio">
+                <div class="container">
+                    <!-- Section Title -->
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Portfolio</h2>
+                        </div>
+                    </div>
+
+                    <!-- Statistics Bar -->
+                    <div class="row">
+                        <div class="portfolio-stats padd-15">
+                            <!-- Stat Card 1 -->
+                            <div class="stat-card shadow-dark">
+                                <i class="fas fa-cube"></i>
+                                <h3>4+</h3>
+                                <p>Completed Projects</p>
+                            </div>
+                            <!-- Stat Card 2 -->
+                            <div class="stat-card shadow-dark">
+                                <i class="fas fa-terminal"></i>
+                                <h3>50+</h3>
+                                <p>Challenges Solved</p>
+                            </div>
+                            <!-- Stat Card 3 -->
+                            <div class="stat-card shadow-dark">
+                                <i class="fas fa-folder-open"></i>
+                                <h3>4</h3>
+                                <p>Repositories</p>
+                            </div>
+                            <!-- Stat Card 4 -->
+                            <div class="stat-card shadow-dark">
+                                <i class="fas fa-code-commit"></i>
+                                <h3>35</h3>
+                                <p>Contributions</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Featured Projects -->
+                    <div class="row">
+                        <div class="featured-project-wrap padd-15">
+                            <h3 class="tittle">Featured Projects</h3>
+                            <!-- Featured Project 1 -->
+                            <div class="featured-card shadow-dark">
+                                <!-- Project Image -->
+                                <div class="featured-img">
+                                    <div class="img-placeholder">
+                                        <i class="fas fa-shipping-fast"></i>
+                                        <span>Courier Systems Dashboard</span>
+                                    </div>
+                                </div>
+                                <!-- Project Details -->
+                                <div class="featured-content"> 
+                                    <span class="badge featured-tag"><i class="fas fa-star"></i> Top Project</span>
+                                    <h4>Courier Management System</h4>
+                                    <p class="featured-desc">
+                                        Desktop application for managing courier deliveries, parcels, and customer records.
+                                        Built with robust data handling and structured logs to streamline logistics workflow.
+                                    </p>
+                                    <div class="project-challenge">
+                                        <strong><i class="fa fas-lightbulb"></i>Challenge & Solution:</strong>
+                                        Creating an efficient parcel search feature across large customer datasets.
+                                        Implemented indexed database queries to reduce lookup times significantly.
+                                    </div>
+                                    <div class="badges-flex">
+                                        <span class="badge"><i class="fas fa-code"></i> Delphi / Object Pascal</span>
+                                        <span class="badge"><i class="fas fa-database"></i> MS Access / SQL</span>
+                                        <span class="badge"><i class="fas fa-desktop"></i> VCL Forms</span>
+                                    </div>
+                                    <div class="portfolio-buttons">
+                                        <a href="#" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                        <a href="https://github.com/TRI-DevLab" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Search & Filter Bar -->
+                    <div class="row">
+                        <div class="portfolio-filter-bar padd-15">
+                            <!-- Search & Filter Inputs -->
+                            <div class="search-box shadow-dark">
+                                <i class="fas fa-search"></i>
+                                <input type="text" placeholder="Search Projects..." id="project-search" onkeyup="filterProjects()">
+                            </div>
+                            <!-- Filter Buttons -->
+                            <div class="filter-buttons">
+                                <button class="filter-btn active" data-filter="all">All</button>
+                                <button class="filter-btn" data-filter="web">Web</button>
+                                <button class="filter-btn" data-filter="desktop">Desktop</button>
+                                <button class="filter-btn" data-filter="python">Python</button>
+                                <button class="filter-btn" data-filter="ai">AI</button>
+                                <button class="filter-btn" data-filter="databases">Databases</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Grid -->
+                    <div class="row project-grid" id="project-grid">
+
+                        <!-- Project 1 -->
+                        <div class="project-item padd-15" data-category="desktop python databases" data-title="student management system">
+                            <div class="project-card shadow-dark">
+                                <!-- Project Image -->
+                                <div class="project-img-wrap">
+                                    <div class="project-thumb-placeholder"><i class="fas fa-user-graduate"></i></div>
+                                </div>
+                                <!-- Project Details -->
+                                <div class="project-info">
+                                    <span class="project-cat">Desktop • Python • Databases</span>
+                                    <h4 class="project-title">Student Management System</h4>
+                                    <p>
+                                        Comprehensive system for tracking student records, grades, and school administrative data.
+                                    </p>
+                                    <div class="badges-flex">
+                                        <span class="badge">Python</span>
+                                        <span class="badge">SQLite</span>
+                                    </div>
+                                    <div class="portfolio-buttons">
+                                        <a href="#" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                        <a href="https://github.com/TRI-DevLab" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div class="project-item padd-15" data-category="web" data-title="personal portfolio website">
+                            <div class="project-card shadow-dark">
+                                <!-- Project Image -->
+                                <div class="project-img-wrap">
+                                    <div class="project-thumb-placeholder"><i class="fas fa-globe"></i></div>
+                                </div>
+                                <!-- Project Details -->
+                                <div class="project-info">
+                                    <span class="project-cat">Web Development</span>
+                                    <h4 class="project-title">Personal Portfolio Website</h4>
+                                    <p>
+                                        A responsive and interactive portfolio showcasing my projects, skills, and professional journey.
+                                    </p>
+                                    <div class="badges-flex">
+                                        <span class="badge">HTML5</span>
+                                        <span class="badge">CSS3</span>
+                                        <span class="badge">JavaScript</span>
+                                    </div>
+                                    <div class="portfolio-buttons">
+                                        <a href="#" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                        <a href="https://github.com/TRI-DevLab" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="project-item padd-15" data-category="web" data-title="weather dashboard">
+                            <div class="project-card shadow-dark">
+                                <!-- Project Image -->
+                                <div class="project-img-wrap">
+                                    <div class="project-thumb-placeholder"><i class="fas fa-cloud-sun"></i></div>
+                                </div>
+                                <!-- Project Details -->
+                                <div class="project-info">
+                                    <span class="project-cat">Web Development</span>
+                                    <h4 class="project-title">Weather Dashboard</h4>
+                                    <p>
+                                        A web application that provides real-time weather information and forecasts for any location.
+                                    </p>
+                                    <div class="badges-flex">
+                                        <span class="badge">JavaScript</span>
+                                        <span class="badge">API Integration</span>
+                                    </div>
+                                    <div class="portfolio-buttons">
+                                        <a href="https://tri-devlab.github.io/personal-portfolio" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                        <a href="https://github.com/TRI-DevLab" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 4 -->
+                        <div class="project-item padd-15" data-category="python" data-title="password manager">
+                            <div class="project-card shadow-dark">
+                                <!-- Project Image -->
+                                <div class="project-img-wrap">
+                                    <div class="project-thumb-placeholder"><i class="fas fa-key"></i></div>
+                                </div>
+                                <!-- Project Details -->
+                                <div class="project-info">
+                                    <span class="project-cat">Python Utility</span>
+                                    <h4 class="project-title">Password Manager</h4>
+                                    <p>
+                                        A simple password manager application built with Python.
+                                    </p>
+                                    <div class="badges-flex">
+                                        <span class="badge">Python</span>
+                                        <span class="badge">Cryptography</span>
+                                    </div>
+                                    <div class="portfolio-buttons">
+                                        <span class="btn coming-soon-btn">Coming Soon</span>
+                                        <a href="https://github.com/TRI-DevLab" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 5 -->
+                        <div class="project-item padd-15" data-category="ai" data-title="chatbot assistant">
+                            <div class="project-card shadow-dark">
+                                <!-- Project Image -->
+                                <div class="project-img-wrap">
+                                    <div class="project-thumb-placeholder"><i class="fas fa-robot"></i></div>
+                                </div>
+                                <!-- Project Details -->
+                                <div class="project-info">
+                                    <span class="project-cat">AI & Machine Learning</span>
+                                    <h4 class="project-title">Chatbot Assistant</h4>
+                                    <p>
+                                        An AI-powered chatbot that can answer questions and provide assistance.
+                                    </p>
+                                    <div class="badges-flex">
+                                        <span class="badge">Python</span>
+                                        <span class="badge">NLP</span>
+                                    </div>
+                                    <div class="portfolio-buttons">
+                                        <span class="btn coming-soon-btn">Coming Soon</span>
+                                        <a href="https://github.com/TRI-DevLab" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 6 -->
+                        <div class="project-item padd-15" data-category="databases" data-title="inventory management system">
+                            <div class="project-card shadow-dark">
+                                <!-- Project Image -->
+                                <div class="project-img-wrap">
+                                    <div class="project-thumb-placeholder"><i class="fas fa-warehouse"></i></div>
+                                </div>
+                                <!-- Project Details -->
+                                <div class="project-info">
+                                    <span class="project-cat">Database Management</span>
+                                    <h4 class="project-title">Inventory Management System</h4>
+                                    <p>
+                                        A system to manage inventory levels, orders, and product data efficiently.
+                                    </p>
+                                    <div class="badges-flex">
+                                        <span class="badge">SQL</span>
+                                        <span class="badge">Database Design</span>
+                                    </div>
+                                    <div class="portfolio-buttons">
+                                        <span class="btn coming-soon-btn">Coming Soon</span>
+                                        <a href="https://github.com/TRI-DevLab" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Coming Soon Roadmap -->
+                    <div class="row">
+                        <div class="coming-soon-wrapper padd-15">
+                            <h3 class="title">Future Project Roadmap</h3>
+                            <div class="roadmap-grid">
+                                <!-- Roadmap Item 1 -->
+                                <div class="roadmap-card shadow-dark">
+                                    <i class="fas fa-robot"></i>
+                                    <h4>Robotics Projects</h4>
+                                    <p>Exploring robotics applications and integrating AI for autonomous systems.</p>
+                                </div>
+
+                                <!-- Roadmap Item 2 -->
+                                <div class="roadmap-card shadow-dark">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <h4>Cybersecurity Tools</h4>
+                                    <p>Developing tools and scripts to enhance security practices and protect data.</p>
+                                </div>
+
+                                <!-- Roadmap Item 3 -->
+                                <div class="roadmap-card shadow-dark">
+                                    <i class="fas fa-brain"></i>
+                                    <h4>AI & Machine Learning</h4>
+                                    <p>Implementing machine learning models for predictive analytics and automation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- GitHub Call to Action -->
+                    <div class="row">
+                        <div class="github-cta padd-15 shadow-dark">
+                            <div class="cta-content">
+                                <h3>Explore More on GitHub</h3>
+                                <p>Check out my complete repository archive, experimental code scripts, and open-source
+                                    contributions.</p>
+                                <a href="https://github.com/TRI-DevLab" class="btn" target="_blank">
+                                    <i class="fab fa-github"></i> See all my projects on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- ===== Portfolio Section End ===== -->
         </div>
         <!-- ===== Main Content End ===== -->
     </div>
