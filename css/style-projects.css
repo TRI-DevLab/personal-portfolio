@@ -1,0 +1,390 @@
+/* Portfolio Section Styles */
+.portfolio-stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.portfolio-stats .stat-card {
+    flex: 1;
+    min-width: 160px;
+}
+
+/* Featured Project Card */
+.featured-project-wrap {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+.featured-card {
+    background: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 12px;
+    display: flex;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.featured-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(48, 46, 77, 0.15);
+}
+
+.featured-img {
+    flex: 0 0 45%;
+    max-width: 45%;
+    background: var(--bg-black-50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+}
+
+.img-placeholder {
+    text-align: center;
+    color: var(--skin-color);
+}
+
+.img-placeholder i {
+    font-size: 50px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.img-placeholder span {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-black-700);
+}
+
+.featured-content {
+    flex: 0 0 55%;
+    max-width: 55%;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featured-tag {
+    background: rgba(236, 24, 57, 0.1);
+    color: var(--skin-color);
+    border-color: rgba(236, 24, 57, 0.2);
+    margin-bottom: 15px;
+    width: fit-content;
+}
+
+.featured-content h4 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    margin-bottom: 12px;
+}
+
+.featured-desc {
+    font-size: 15px;
+    color: var(--text-black-700);
+    line-height: 24px;
+    margin-bottom: 15px;
+}
+
+.project-challenge {
+    font-size: 13px;
+    background: var(--bg-black-50);
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: var(--text-black-700);
+    margin-bottom: 20px;
+    line-height: 20px;
+    border-left: 3px solid var(--skin-color);
+}
+
+.project-challenge strong {
+    color: var(--text-black-900);
+    display: block;
+    margin-bottom: 3px;
+}
+
+
+/* // Adjustment of Badges //*/
+.featured-content .badges-flex {
+    margin-bottom: 24px;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* Filter & Search Bar */
+.portfolio-filter-bar {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.search-box {
+    background: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 280px;
+}
+
+.search-box i {
+    color: var(--skin-color);
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-black-900);
+    font-size: 14px;
+    font-family: inherit;
+    width: 100%;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-btn {
+    background: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    color: var(--text-black-900);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--skin-color);
+    color: #ffffff;
+    border-color: var(--skin-color);
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* Project Grid */
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.project-item {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    margin-bottom: 30px;
+}
+
+.project-card {
+    background: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(48, 46, 77, 0.15);
+}
+
+.project-img-wrap {
+    height: 170px;
+    background: var(--bg-black-50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.project-thumb-placeholder {
+    font-size: 40px;
+    color: var(--skin-color);
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-thumb-placeholder {
+    transform: scale(1.1);
+}
+
+.project-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-cat {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--skin-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.project-info h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 13px;
+    color: var(--text-black-700);
+    line-height: 20px;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.project-info .badges-flex {
+    margin-bottom: 20px;
+    gap: 8px;
+}
+
+.project-info .badge {
+    padding: 4px 10px;
+    font-size: 11px;
+}
+
+.portfolio-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.portfolio-buttons .btn {
+    padding: 8px 16px;
+    font-size: 12px;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid var(--skin-color);
+    color: var(--skin-color);
+}
+
+.btn-secondary:hover {
+    background: var(--skin-color);
+    color: #ffffff;
+}
+
+.coming-soon-btn {
+    background: var(--bg-black-50);
+    color: var(--text-black-700);
+    cursor: default;
+}
+
+.coming-soon-btn:hover {
+    transform: none;
+    background: var(--bg-black-50);
+    color: var(--text-black-700);
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* Coming Soon Roadmap */
+.coming-soon-wrapper {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.coming-soon-wrapper h3.title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: var(--text-black-900);
+}
+
+.roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.roadmap-card {
+    background: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+    padding: 22px 20px;
+    transition: transform 0.3s ease;
+}
+
+.roadmap-card:hover {
+    transform: translateY(-4px);
+}
+
+.roadmap-card i {
+    font-size: 22px;
+    color: var(--skin-color);
+    margin-bottom: 12px;
+}
+
+.roadmap-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    margin-bottom: 6px;
+}
+
+.roadmap-card p {
+    font-size: 13px;
+    color: var(--text-black-700);
+    line-height: 20px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* GitHub Call To Action */
+.github-cta {
+    flex: 0 0 100%;
+    max-width: 100%;
+    background: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.github-cta h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    margin-bottom: 10px;
+}
+
+.github-cta p {
+    font-size: 14px;
+    color: var(--text-black-700);
+    margin-bottom: 25px;
+}
