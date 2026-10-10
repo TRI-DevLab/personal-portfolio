@@ -1157,6 +1157,140 @@
                 </div>
             </section>
             <!-- ===== Blog Section End ===== -->
+            <!-- ===== Contact Section Start ===== -->
+            <section class="contact section" id="contact">
+                <div class="container">
+                    <!-- Section Header & Summary -->
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Contact Me</h2>
+                        </div>
+                        <div class="contact-summary padd-15">
+                            <p>
+                                I'm always open to discussing new projects, collaborations, or opportunities. Feel free to reach out
+                                via email or connect with me on LinkedIn and GitHub. Let's create something amazing together!
+                                I'd love to hear from you. Fill out the form below or reach out directly!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Left Column: Interactive Contact Form -->
+                        <div class="contact-form-wrap padd-15">
+                            <div class="form-container shadow-dark">
+                                <form id="contact-form" novalidate>
+                                    <!-- Hidden Honeypot for bot detection -->
+                                    <div class="hp-wrap" style="position: absolute; left: -9999px; opacity: 0;" aria-hidden="true">
+                                        <label for="hp_website">Leave this field empty</label>
+                                        <input type="text" id="hp_website" name="_hp_website" tabindex="-1" autocomplete="off">
+                                    </div>
+                                
+                                    <!-- Full Name -->
+                                    <div class="form-group">
+                                        <label for="full-name">Full Name <span class="required" aria-hidden="true">*</span></label>
+                                        <input type="text" id="full-name" name="user_name" class="form-control" placeholder="John Doe"
+                                            autocomplete="name" required aria-describedby="name-error">
+                                        <span class="error-msg" id="name-error" role="alert">Please enter your full name.</span>
+                                    </div>
+                                
+                                    <!-- Email Address -->
+                                    <div class="form-group">
+                                        <label for="email-address">Email Address <span class="required" aria-hidden="true">*</span></label>
+                                        <input type="email" id="email-address" name="user_email" class="form-control" placeholder="john@example.com"
+                                            autocomplete="email" required aria-describedby="email-error">
+                                        <span class="error-msg" id="email-error" role="alert">Please enter a valid email address.</span>
+                                    </div>
+                                
+                                    <!-- Subject -->
+                                    <div class="form-group">
+                                        <label for="subject">Subject <span class="required" aria-hidden="true">*</span></label>
+                                        <input type="text" id="subject" name="subject" class="form-control" placeholder="Project Inquiry / Hello"
+                                            required aria-describedby="subject-error">
+                                        <span class="error-msg" id="subject-error" role="alert">Please enter a subject.</span>
+                                    </div>
+                                
+                                    <!-- Message -->
+                                    <div class="form-group">
+                                        <label for="message">Message <span class="required" aria-hidden="true">*</span></label>
+                                        <textarea id="message" name="message" class="form-control" rows="5" minlength="10" maxlength="2000"
+                                            placeholder="Write your message here..." required aria-describedby="message-error"></textarea>
+                                        <span class="error-msg" id="message-error" role="alert">Please enter a message (at least 10 characters).</span>
+                                    </div>
+                                
+                                    <!-- Submit Button -->
+                                    <button type="submit" class="btn submit-btn" id="submit-btn">
+                                        <span class="btn-text">Send Message <i class="fas fa-paper-plane"></i></span>
+                                        <span class="btn-spinner hidden"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+                                    </button>
+                                
+                                    <!-- Form Status Feedback Box -->
+                                    <div class="form-status-msg hidden" id="form-status" role="status" aria-live="polite"></div>
+                                </form>
+                            </div>
+                        </div>
+
+                         <!-- Right Column: Direct Info, Socials & Availability -->
+                        <div class="contact-info-wrap padd-15">
+            
+                            <!-- Status Badge -->
+                            <div class="status-card shadow-dark">
+                                <span class="status-indicator"></span>
+                                <div class="status-content">
+                                    <h4>Currently Open To</h4>
+                                    <p>Collaboration • Internships • Software Projects • Networking</p>
+                                </div>
+                            </div>
+            
+                            <!-- Direct Contact Cards -->
+                            <div class="info-cards-list">
+            
+                                <div class="info-card shadow-dark">
+                                    <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                                    <div class="info-details">
+                                        <h5>Email</h5>
+                                        <a href="mailto:tri.devlab@gmail.com">tri.devlab@gmail.com</a>
+                                    </div>
+                                </div>
+            
+                                <div class="info-card shadow-dark">
+                                    <div class="info-icon"><i class="fab fa-github"></i></div>
+                                    <div class="info-details">
+                                        <h5>GitHub</h5>
+                                        <a href="https://github.com/TRI-DevLab" target="_blank">github.com/TRI-DevLab</a>
+                                    </div>
+                                </div>
+            
+                                <div class="info-card shadow-dark">
+                                    <div class="info-icon"><i class="fab fa-linkedin"></i></div>
+                                    <div class="info-details">
+                                        <h5>LinkedIn</h5>
+                                        <a href="https://www.linkedin.com/in/tri-bam" target="_blank">linkedin.com/in/tri-bam</a>
+                                    </div>
+                                </div>
+            
+                                <div class="info-card shadow-dark">
+                                    <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <div class="info-details">
+                                        <h5>Location</h5>
+                                        <p>South Africa</p>
+                                    </div>
+                                </div>
+            
+                            </div>
+            
+                            <!-- Resume Call To Action -->
+                            <div class="cv-cta-box shadow-dark">
+                                <h4>Need my résumé?</h4>
+                                <p>Get a complete copy of my background, qualifications, and coursework.</p>
+                                <a href="files/TRI_CV.pdf" class="btn" target="_blank"><i class="fas fa-download"></i> Download
+                                    CV</a>
+                            </div>
+            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ===== Contact Section End ===== -->
         </div>
         <!-- ===== Main Content End ===== -->
     </div>

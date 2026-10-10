@@ -1,0 +1,230 @@
+/* Contact Section */
+.contact-summary {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+.contact-summary p {
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--text-black-700);
+}
+
+.contact-form-wrap {
+    flex: 0 0 60%;
+    max-width: 60%;
+    margin-bottom: 30px;
+}
+
+.contact-info-wrap {
+    flex: 0 0 40%;
+    max-width: 40%;
+    margin-bottom: 30px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* Form Container */
+.form-container {
+    background: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-black-900);
+    margin-bottom: 8px;
+}
+
+.form-group .required {
+    color: var(--skin-color);
+}
+
+.form-control {
+    width: 100%;
+    background: var(--bg-black-900);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--text-black-900);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--skin-color);
+}
+
+.error-msg {
+    display: none;
+    font-size: 12px;
+    color: var(--skin-color);
+    margin-top: 5px;
+}
+
+.form-group.invalid .error-msg {
+    display: block;
+}
+
+.form-group.invalid .form-control {
+    border-color: var(--skin-color);
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* Submit Button & Status Message */
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.form-status-msg {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.form-status-msg.success {
+    background: rgba(40, 167, 69, 0.12);
+    border: 1px solid #28a745;
+    color: #28a745;
+}
+
+.form-status-msg.error {
+    background: rgba(236, 24, 57, 0.12);
+    border: 1px solid var(--skin-color);
+    color: var(--skin-color);
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* Right Column Components */
+.status-card {
+    background: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.status-indicator {
+    width: 14px;
+    height: 14px;
+    background-color: #28a745;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 0 4px rgba(40, 167, 69, 0.2);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(40, 167, 69, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+}
+
+.status-content h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    margin-bottom: 4px;
+}
+
+.status-content p {
+    font-size: 12px;
+    color: var(--text-black-700);
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* Info Cards List */
+.info-cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.info-card {
+    background: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.info-card .info-icon {
+    font-size: 22px;
+    color: var(--skin-color);
+}
+
+.info-card h5 {
+    font-size: 12px;
+    color: var(--text-black-700);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-card a, .info-card p {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-black-900);
+}
+
+.info-card a:hover {
+    color: var(--skin-color);
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* Resume Box */
+.cv-cta-box {
+    background: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+}
+
+.cv-cta-box h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    margin-bottom: 8px;
+}
+
+.cv-cta-box p {
+    font-size: 13px;
+    color: var(--text-black-700);
+    margin-bottom: 18px;
+    line-height: 20px;
+}
