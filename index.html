@@ -960,6 +960,203 @@
                 </div>
             </section>
             <!-- ===== Portfolio Section End ===== -->
+            <!-- ===== Blog Section Start ===== -->
+            <section class="blog section" id="blog">
+                <div class="container">
+                    <!-- Section Header & Top Summary -->
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Journal</h2>
+                        </div>
+                        <div class="blog-summary padd-15">
+                            <p>
+                                A record of my engineering journey, technical insights, challenges solved,
+                                and notes on emerging technologies I'm exploring.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Featured Articles -->
+                    <div class="row">
+                        <div class="featured-article-wrap padd-15">
+                            <h3 class="title">Featured Posts</h3>
+                            <!-- Featured Article 1 -->
+                            <div class="featured-article-card shadow-dark">
+                                <!-- Featured Article image -->
+                                <div class="featured-blog-img">
+                                    <div class="blog-img-placeholder">
+                                        <i class="fas fa-laptop-code"></i>
+                                        <span>Portfolio Site Build</span>
+                                    </div>
+                                </div>
+                                <!-- Featured Article Content -->
+                                <div class="featured-blog-content">
+                                    <div class="article-meta">
+                                        <span class="badge article-category"><i class="fas fa-globe"></i> Web Development</span>
+                                        <span class="read-time"><i class="fas fa-clock"></i> 7 min read</span>
+                                        <span class="post-date"><i class="fas fa-calendar-alt"></i> August 2026</span>
+                                    </div>
+                                    <h4>Building My Portfolio Site & Learning Modern Web Development</h4>
+                                    <p>
+                                        An in-depth writeup on how I structured, styled, and built my interactive portfolio
+                                        from scratch while learning modern HTML, CSS, JavaScript, and UI accessibility principles.
+                                    </p>
+                                    <div class="article-tags">
+                                        <span class="tag">#HTML5</span>
+                                        <span class="tag">#CSS3</span>
+                                        <span class="tag">#JavaScript</span>
+                                        <span class="tag">#UI/UX</span>
+                                    </div>
+                                    <a href="#" class="btn read-btn">Read Article <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Search & Category filters -->
+                    <div class="row">
+                        <div class="blog-filter-bar padd-15">
+                            <!-- Search Input -->
+                            <div class="search-box shadow-dark">
+                                <i class="fas fa-search"></i>
+                                <input type="text" placeholder="Search Articles..." id="blog-search" onkeyup="filterArticles()">
+                            </div>
+                            <!-- Category Filter Buttons -->
+                            <div class="filter-buttons">
+                                <button class="blog-filter-btn active" data-category="all">All</button>
+                                <button class="blog-filter-btn" data-category="programming">Programming</button>
+                                <button class="blog-filter-btn" data-category="web-dev">Web Dev</button>
+                                <button class="blog-filter-btn" data-category="projects">Projects</button>
+                                <button class="blog-filter-btn" data-category="ai">AI & Robotics</button>
+                                <button class="blog-filter-btn" data-category="cybersecurity">Cybersecurity</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Article Cards Grid -->
+                    <div class="row blog-grid" id="blog-grid">
+                        <!-- Post 1 -->
+                        <div class="blog-item padd-15" data-category="projects programming"
+                            data-title="lessons from courier management system">
+                            <div class="blog-card shadow-dark">
+                                <div class="blog-thumb">
+                                    <div class="thumb-icon"><i class="fas fa-shipping-fast"></i></div>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="article-meta">
+                                        <span class="badge article-category">Projects</span>
+                                        <span class="read-time"><i class="fas fa-clock"></i> 5 min read</span>
+                                    </div>
+                                    <span class="post-date">July 2026</span>
+                                    <h4>Lessons From Building a Courier Management System</h4>
+                                    <p>What I learned about local database indexing, data models, and UI state handling in desktop
+                                        apps.</p>
+                                    <div class="article-tags">
+                                        <span class="tag">#Python</span>
+                                        <span class="tag">#SQLite</span>
+                                        <span class="tag">#Tkinter</span>
+                                    </div>
+                                    <a href="#" class="btn-link">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Post 2 -->
+                        <div class="blog-item padd-15" data-category="programming"
+                            data-title="why i started learning engineering">
+                            <div class="blog-card shadow-dark">
+                                <div class="blog-thumb">
+                                    <div class="thumb-icon"><i class="fas fa-user-astronaut"></i></div>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="article-meta">
+                                        <span class="badge article-category">Programming</span>
+                                        <span class="read-time"><i class="fas fa-clock"></i> 4 min read</span>
+                                    </div>
+                                    <span class="post-date">June 2026</span>
+                                    <h4>Why I Started Learning Software Engineering</h4>
+                                    <p>My motivations, my self-taught learning routine, and the foundational goals driving my path
+                                        into STEM.</p>
+                                    <div class="article-tags">
+                                        <span class="tag">#Journey</span>
+                                        <span class="tag">#Career</span>
+                                        <span class="tag">#Learning</span>
+                                    </div>
+                                    <a href="#" class="btn-link">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Post 3 -->
+                        <div class="blog-item padd-15" data-category="ai" data-title="my introduction to machine learning">
+                            <div class="blog-card shadow-dark">
+                                <div class="blog-thumb">
+                                    <div class="thumb-icon"><i class="fas fa-brain"></i></div>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="article-meta">
+                                        <span class="badge article-category">AI & Robotics</span>
+                                        <span class="read-time"><i class="fas fa-clock"></i> 6 min read</span>
+                                    </div>
+                                    <span class="post-date">May 2026</span>
+                                    <h4>My Introduction to Machine Learning Concepts</h4>
+                                    <p>Key insights from my coursework exploring neural networks, datasets, and practical algorithm
+                                        setups.</p>
+                                    <div class="article-tags">
+                                        <span class="tag">#MachineLearning</span>
+                                        <span class="tag">#Python</span>
+                                        <span class="tag">#AI</span>
+                                    </div>
+                                    <a href="#" class="btn-link">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Post 4 -->
+                        <div class="blog-item padd-15" data-category="cybersecurity" data-title="password security explained">
+                            <div class="blog-card shadow-dark">
+                                <div class="blog-thumb">
+                                    <div class="thumb-icon"><i class="fas fa-shield-alt"></i></div>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="article-meta">
+                                        <span class="badge article-category">Cybersecurity</span>
+                                        <span class="read-time"><i class="fas fa-clock"></i> 5 min read</span>
+                                    </div>
+                                    <span class="post-date">April 2026</span>
+                                    <h4>Password Security & Cryptographic Hashing</h4>
+                                    <p>Exploring salt, hashing functions, and how modern authentication systems store user
+                                        credentials safely.</p>
+                                    <div class="article-tags">
+                                        <span class="tag">#Security</span>
+                                        <span class="tag">#Hashing</span>
+                                        <span class="tag">#Cryptography</span>
+                                    </div>
+                                    <a href="#" class="btn-link">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Newsletter Widget -->
+                    <div class="row">
+                        <div class="blog-newsletter padd-15 shadow-dark">
+                            <div class="newsletter-content">
+                                <h3><i class="fas fa-envelope-open-text"></i> Stay Connected</h3>
+                                <p>Follow along with my latest learning milestones, project updates, and articles as I publish them.
+                                </p>
+                                <form class="newsletter-form"
+                                    onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                                    <input type="email" placeholder="Enter your email..." required>
+                                    <button type="submit" class="btn">Subscribe</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ===== Blog Section End ===== -->
         </div>
         <!-- ===== Main Content End ===== -->
     </div>
