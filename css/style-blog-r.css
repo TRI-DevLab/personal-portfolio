@@ -1,0 +1,172 @@
+/* ===== Full-Page Blog Article Reader ===== */
+.blog-reader-overlay {
+    position: fixed;
+    top: 0;
+    left: 270px; /* Aligns with sidebar offset */
+    width: calc(100% - 270px);
+    height: 100vh;
+    background: var(--bg-black-900);
+    z-index: 100;
+    overflow-y: auto;
+    padding: 40px 30px;
+    transition: all 0.4s ease;
+}
+
+body.aside-right .blog-reader-overlay {
+    left: 0;
+    right: 270px;
+}
+
+.blog-reader-container {
+    max-width: 850px;
+    margin: 0 auto;
+    background: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 12px;
+    padding: 40px;
+}
+
+.reader-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--bg-black-50);
+    padding-bottom: 20px;
+}
+
+.reader-badge {
+    background: rgba(236, 24, 57, 0.1);
+    color: var(--skin-color);
+    border: 1px solid rgba(236, 24, 57, 0.2);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.blog-article-full .article-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.blog-article-full .article-meta {
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+    color: var(--text-black-700);
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.blog-article-full .article-meta i {
+    color: var(--skin-color);
+    margin-right: 5px;
+}
+
+/* Typography for Article Content */
+.article-body {
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--text-black-700);
+}
+
+.article-body h2 {
+    font-size: 22px;
+    color: var(--text-black-900);
+    margin: 30px 0 15px;
+}
+
+.article-body p {
+    margin-bottom: 20px;
+}
+
+.article-body blockquote {
+    border-left: 4px solid var(--skin-color);
+    background: var(--bg-black-50);
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    color: var(--text-black-900);
+}
+
+.article-body code {
+    background: var(--bg-black-50);
+    color: var(--skin-color);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+.article-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--bg-black-50);
+}
+
+/* Article Media & Images */
+.article-media {
+    margin: 25px 0;
+    text-align: center;
+}
+
+.article-media img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--bg-black-50);
+}
+
+.article-media figcaption {
+    font-size: 13px;
+    color: var(--text-black-700);
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* Multi-line Code Blocks */
+.article-body pre {
+    background: var(--bg-black-900);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 8px;
+    padding: 16px 20px;
+    overflow-x: auto;
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+.article-body pre code {
+    background: transparent;
+    padding: 0;
+    color: var(--text-black-900);
+    font-size: 14px;
+    font-family: 'Consolas', 'Fira Code', monospace;
+}
+
+/* Math & Equation Blocks */
+.math-block {
+    background: var(--bg-black-50);
+    border-left: 3px solid var(--skin-color);
+    padding: 16px 20px;
+    border-radius: 0 8px 8px 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Cambria Math', 'Times New Roman', serif;
+}
+
+.math-formula {
+    font-size: 18px;
+    color: var(--text-black-900);
+}
+
+.math-caption {
+    font-size: 12px;
+    color: var(--text-black-700);
+    font-style: italic;
+}

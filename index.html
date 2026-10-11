@@ -1015,7 +1015,7 @@
                                         <span class="tag">#JavaScript</span>
                                         <span class="tag">#UI/UX</span>
                                     </div>
-                                    <a href="#" class="btn read-btn">Read Article <i class="fas fa-arrow-right"></i></a>
+                                    <a href="#" class="btn read-btn" data-article="portfolio-build">Read Article <i class="fas fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1064,7 +1064,7 @@
                                         <span class="tag">#SQLite</span>
                                         <span class="tag">#Tkinter</span>
                                     </div>
-                                    <a href="#" class="btn-link">Read More <i class="fas fa-arrow-right"></i></a>
+                                    <a href="#" class="btn-link" data-article="courier-management">Read More <i class="fas fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1090,7 +1090,7 @@
                                         <span class="tag">#Career</span>
                                         <span class="tag">#Learning</span>
                                     </div>
-                                    <a href="#" class="btn-link">Read More <i class="fas fa-arrow-right"></i></a>
+                                    <a href="#" class="btn-link" data-article="why-software-engineering">Read More <i class="fas fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1115,7 +1115,7 @@
                                         <span class="tag">#Python</span>
                                         <span class="tag">#AI</span>
                                     </div>
-                                    <a href="#" class="btn-link">Read More <i class="fas fa-arrow-right"></i></a>
+                                    <a href="#" class="btn-link" data-article="intro-machine-learning">Read More <i class="fas fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1140,7 +1140,7 @@
                                         <span class="tag">#Hashing</span>
                                         <span class="tag">#Cryptography</span>
                                     </div>
-                                    <a href="#" class="btn-link">Read More <i class="fas fa-arrow-right"></i></a>
+                                    <a href="#" class="btn-link" data-article="password-security">Read More <i class="fas fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1440,11 +1440,48 @@
     </div>
     <!-- ===== Style Switcher End ===== -->
 
+    <!-- ===== Full Blog Article View Overlay Start ===== -->
+    <div class="blog-reader-overlay hidden" id="blog-reader">
+        <div class="blog-reader-container shadow-dark">
+            <!-- Reader Navigation Header -->
+            <div class="reader-header">
+                <button class="btn btn-secondary back-to-blog-btn" id="close-blog-reader">
+                    <i class="fas fa-arrow-left"></i> Back to Journal
+                </button>
+                <span class="reader-badge" id="reader-category">Category</span>
+            </div>
+    
+            <!-- Article Content Display Area -->
+            <article class="blog-article-full">
+                <div class="article-header">
+                    <h1 id="reader-title">Article Title</h1>
+                    <div class="article-meta">
+                        <span><i class="fas fa-calendar-alt"></i> <span id="reader-date">Date</span></span>
+                        <span><i class="fas fa-clock"></i> <span id="reader-time">5 min read</span></span>
+                        <span><i class="fas fa-user"></i> Triumphant Bamitale</span>
+                    </div>
+                </div>
+    
+                <!-- Full Article Body -->
+                <div class="article-body" id="reader-body">
+                    <!-- Content will be injected dynamically -->
+                </div>
+    
+                <!-- Tags Footer -->
+                <div class="article-footer">
+                    <div class="article-tags" id="reader-tags"></div>
+                </div>
+            </article>
+        </div>
+    </div>
+    <!-- ===== Full Blog Article View Overlay End ===== -->
+
     <!-- ===== JavaScript Files ===== -->
     <script src="js/script.js"></script>
     <script src="js/script-splash.js"></script>
     <script src="js/script-navigation.js"></script>
     <script src="js/script-themes.js"></script>
+    <script src="js/blog-data.js"></script>
     <script src="js/script-blogs.js"></script>
     <script src="js/script-projects.js"></script>
     <script src="js/script-contact.js"></script>
