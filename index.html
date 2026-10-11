@@ -45,6 +45,7 @@
 <body>
     <!-- ===== Main Container Start ===== -->
     <div class="main-container">
+
         <!-- ===== Aside Start ===== -->
         <div class="aside">
             <div class="logo">
@@ -64,8 +65,10 @@
             </ul>
         </div>
         <!-- ===== Aside End ===== -->
+
         <!-- ===== Main Content Start ===== -->
         <div class="main-content">
+
             <!-- ===== Home Section Start ===== -->
             <section class="home section active" id="home">
                 <div class="container">
@@ -700,7 +703,7 @@
                     <!-- Featured Projects -->
                     <div class="row">
                         <div class="featured-project-wrap padd-15">
-                            <h3 class="tittle">Featured Projects</h3>
+                            <h3 class="title">Featured Projects</h3>
                             <!-- Featured Project 1 -->
                             <div class="featured-card shadow-dark">
                                 <!-- Project Image -->
@@ -1394,13 +1397,54 @@
         <!-- ===== Main Content End ===== -->
     </div>
     <!-- ===== Main Container End ===== -->
-   
+    
+    <!-- ===== Style Switcher Start ===== -->
+    <div class="style-switcher shadow-dark">
+        <!-- Toggle Gear Button -->
+        <button class="style-switcher-toggler s-icon" aria-label="Toggle Theme Settings">
+            <i class="fas fa-cog fa-spin"></i>
+        </button>
+
+        <!-- Panel Content -->
+        <h4>Theme Settings</h4>
+
+        <!-- 1. Navigation Position -->
+        <div class="switcher-item">
+            <label>Nav Position:</label>
+            <div class="nav-position-options">
+                <button class="nav-pos-btn active" data-pos="left">Left</button>
+                <button class="nav-pos-btn" data-pos="right">Right</button>
+            </div>
+        </div>
+
+        <!-- 2. Dark / Light Mode Toggle -->
+        <div class="switcher-item">
+            <label>Theme Mode:</label>
+            <div class="day-night s-icon" role="button" aria-label="Toggle Dark and Light Mode">
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+
+        <!-- 3. Skin Color Switcher -->
+        <div class="switcher-item">
+            <label>Accent Colors:</label>
+            <div class="colors">
+                <span class="color-dot active" data-color="#ec1839" style="background: #ec1839;"></span>
+                <span class="color-dot" data-color="#fa5b0f" style="background: #fa5b0f;"></span>
+                <span class="color-dot" data-color="#37b182" style="background: #37b182;"></span>
+                <span class="color-dot" data-color="#1854b4" style="background: #1854b4;"></span>
+                <span class="color-dot" data-color="#a118ec" style="background: #a118ec;"></span>
+            </div>
+        </div>
+
+    </div>
+    <!-- ===== Style Switcher End ===== -->
 
     <!-- ===== JavaScript Files ===== -->
     <script src="js/script.js"></script>
     <script src="js/script-splash.js"></script>
     <script src="js/script-navigation.js"></script>
-    <script src="js/script-theme.js"></script>
+    <script src="js/script-styles.js"></script>
     <script src="js/script-blogs.js"></script>
     <script src="js/script-projects.js"></script>
     <script src="js/script-contact.js"></script>

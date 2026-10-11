@@ -140,7 +140,211 @@ ul
 /*//////////////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////////////////////////////////////*/
 
+/* ===== Style Switcher Panel ===== */
+.style-switcher {
+    position: fixed;
+    right: 0;
+    top: 60px;
+    padding: 20px;
+    width: 220px;
+    border: 1px solid var(--bg-black-50);
+    background: var(--bg-black-100);
+    z-index: 101;
+    border-radius: 10px 0 0 10px;
+    transition: all 0.3s ease;
+    transform: translateX(100%);
+}
 
+.style-switcher.open {
+    transform: translateX(0);
+}
+
+.style-switcher-toggler {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    background: var(--bg-black-100);
+    color: var(--text-black-900);
+    border: 1px solid var(--bg-black-50);
+    border-right: none;
+    right: 100%;
+    top: 0;
+    cursor: pointer;
+    border-radius: 8px 0 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.style-switcher h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--bg-black-50);
+    padding-bottom: 5px;
+}
+
+.switcher-item {
+    margin-bottom: 18px;
+}
+
+.switcher-item label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-black-700);
+    margin-bottom: 8px;
+}   
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* Color Dots */
+.style-switcher .colors {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.style-switcher .colors .color-dot {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.style-switcher .colors .color-dot:hover {
+    transform: scale(1.15);
+}
+
+.style-switcher .colors .color-dot.active {
+    box-shadow: 0 0 0 2px var(--bg-black-100), 0 0 0 4px var(--skin-color);
+    transform: scale(1.1);
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* Nav Position Selector Buttons */
+.nav-position-options {
+    display: flex;
+    gap: 8px;
+}
+
+.nav-pos-btn {
+    flex: 1;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid var(--bg-black-50);
+    background: var(--bg-black-900);
+    color: var(--text-black-900);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.nav-pos-btn.active, .nav-pos-btn:hover {
+    background: var(--skin-color);
+    color: #ffffff;
+    border-color: var(--skin-color);
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* Day/Night Toggle Button */
+.day-night {
+    height: 35px;
+    width: 35px;
+    background: var(--bg-black-900);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--skin-color);
+    font-size: 16px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* ===== Right Sidebar Alignment Rules ===== */
+body.aside-right .aside {
+    left: auto;
+    right: 0;
+    border-right: none;
+    border-left: 1px solid var(--bg-black-50);
+}
+
+body.aside-right .main-content {
+    padding-left: 0;
+    padding-right: 270px;
+}
+
+body.aside-right .footer {
+    padding-left: 0;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+/* ===== Dark Theme Variables Overrides ===== */
+body.dark {
+    --bg-black-900: #151515;
+    --bg-black-100: #222222;
+    --bg-black-50: #393939;
+    --text-black-900: #ffffff;
+    --text-black-700: #e8e8e8;
+}
+
+/* Dark Mode Featured Project Text Visibility Fix */
+body.dark .featured-project-wrap .title,
+body.dark .featured-content h4,
+body.dark .featured-content .featured-desc,
+body.dark .featured-content .project-challenge {
+    color: var(--text-black-900) !important;
+}
+
+/* Ensure secondary text in dark mode remains readable */
+body.dark .featured-content .featured-desc,
+body.dark .featured-content .project-challenge {
+    color: var(--text-black-700) !important;
+}
+
+/* Fix for featured tag background and text in dark mode */
+body.dark .featured-tag {
+    background: rgba(236, 24, 57, 0.2);
+    color: var(--skin-color);
+    border: 1px solid var(--skin-color);
+}
+
+/* Dark Mode Featured Article Text Visibility Fix */
+body.dark .featured-article-wrap .title,
+body.dark .featured-blog-content h4,
+body.dark .featured-blog-content p {
+    color: var(--text-black-900) !important;
+}
+
+body.dark .featured-blog-content p {
+    color: var(--text-black-700) !important;
+}
+
+/* Fix article metadata and tags in dark mode */
+body.dark .featured-blog-content .article-meta,
+body.dark .featured-blog-content .post-date,
+body.dark .featured-blog-content .read-time {
+    color: var(--text-black-700);
+}
+
+body.dark .featured-blog-content .article-tags .tag {
+    background: var(--bg-black-50);
+    color: var(--text-black-900);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
 
 /*//////////////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////////////////////////////////////*/
