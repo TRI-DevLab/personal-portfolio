@@ -105,3 +105,15 @@ h3.my-profession
     color: white;
     transform: translateY(-5px);
 }
+
+/* Typing Caret Animation */
+.my-profession .typing {
+    border-right: 2px solid var(--skin-color);
+    padding-right: 4px;
+    animation: blinkCaret 0.75s step-end infinite;
+}
+
+@keyframes blinkCaret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--skin-color); }
+}
