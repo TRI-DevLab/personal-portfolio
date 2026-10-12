@@ -790,7 +790,9 @@
                                         <span class="badge"><i class="fas fa-desktop"></i> VCL Forms</span>
                                     </div>
                                     <div class="portfolio-buttons">
-                                        <a href="#" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                        <a href="#" class="btn open-project-modal" data-project="courier-management">
+                                            <i class="fas fa-external-link-alt"></i> Live Demo
+                                        </a>
                                         <a href="https://github.com/TRI-DevLab" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                                     </div>
                                 </div>
@@ -840,7 +842,7 @@
                                         <span class="badge">SQLite</span>
                                     </div>
                                     <div class="portfolio-buttons">
-                                        <a href="#" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                        <a href="#" class="btn open-project-modal" data-project="student-management">Live Demo</a>
                                         <a href="https://github.com/TRI-DevLab" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                                     </div>
                                 </div>
@@ -867,7 +869,7 @@
                                         <span class="badge">JavaScript</span>
                                     </div>
                                     <div class="portfolio-buttons">
-                                        <a href="#" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                        <a href="#" class="btn open-project-modal" data-project="portfolio-site">Live Demo</a>
                                         <a href="https://github.com/TRI-DevLab" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                                     </div>
                                 </div>
@@ -893,7 +895,7 @@
                                         <span class="badge">API Integration</span>
                                     </div>
                                     <div class="portfolio-buttons">
-                                        <a href="https://tri-devlab.github.io/personal-portfolio" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                        <a href="#" class="btn open-project-modal" data-project="portfolio-site">Live Demo</a>
                                         <a href="https://github.com/TRI-DevLab" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                                     </div>
                                 </div>
@@ -1534,6 +1536,17 @@
     </div>
     <!-- ===== Full Blog Article View Overlay End ===== -->
 
+    <!-- ===== Project Details Modal Start ===== -->
+    <div class="project-modal" id="project-modal">
+        <div class="modal-content shadow-dark">
+            <span class="close-modal" id="close-modal">&times;</span>
+            <div class="modal-body" id="modal-body">
+                <!-- Content will be injected dynamically via JS -->
+            </div>
+        </div>
+    </div>
+    <!-- ===== Project Details Modal End ===== -->
+
     <!-- ===== JavaScript Files ===== -->
     <script src="js/script.js"></script>
     <script src="js/script-splash.js"></script>
@@ -1541,6 +1554,7 @@
     <script src="js/script-themes.js"></script>
     <script src="js/blog-data.js"></script>
     <script src="js/script-blogs.js"></script>
+    <script src="js/project-data.js"></script>
     <script src="js/script-projects.js"></script>
     <script src="js/script-contact.js"></script>
     
