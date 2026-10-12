@@ -296,6 +296,42 @@
     }
 }
 
+@media (max-width: 991px) {
+    .home-img {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-top: 35px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        position: relative !important;
+    }
+
+    /* Wrap or constrain the holder so ::before and ::after measure against the image size */
+    .home-img img {
+        max-width: 190px !important;
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        margin: 0 auto !important;
+    }
+
+    /* Pull the decorative corner brackets close to the centered picture */
+    .home-img::before {
+        left: calc(50% - 105px) !important;
+        top: -12px !important;
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .home-img::after {
+        right: calc(50% - 105px) !important;
+        bottom: -12px !important;
+        width: 40px !important;
+        height: 40px !important;
+    }
+}
+
 /* --------------------------------------------------------------------------
    3. Small Mobile Phones (max-width: 576px)
    -------------------------------------------------------------------------- */
