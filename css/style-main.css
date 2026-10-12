@@ -899,3 +899,64 @@ body.dark .featured-blog-content .article-tags .tag {
         padding-top: 80px;
     }
 }
+
+/* ==========================================================================
+   Mobile & Tablet Aside Drawer Fix (max-width: 991px)
+   ========================================================================== */
+@media (max-width: 991px) {
+    /* 1. Default Left Sidebar (Hidden Off-Screen on Mobile) */
+    .aside {
+        position: fixed;
+        top: 0;
+        left: -270px !important;  /* Force it off-screen to the left */
+        right: auto !important;
+        width: 270px;
+        height: 100vh;
+        z-index: 1000;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                    right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Left Sidebar Opened State */
+    .aside.open {
+        left: 0 !important;
+    }
+
+    /* 2. Right Sidebar Alignment (When user toggled Right in theme switcher) */
+    body.aside-right .aside {
+        left: auto !important;
+        right: -270px !important; /* Force off-screen to the right */
+    }
+
+    /* Right Sidebar Opened State */
+    body.aside-right .aside.open {
+        right: 0 !important;
+        left: auto !important;
+    }
+
+    /* 3. Hamburger Button Adjustments */
+    .nav-toggler {
+        display: flex !important;
+        position: fixed !important;
+        top: 20px !important;
+        left: 20px !important;
+        right: auto !important;
+        z-index: 1001;
+        transition: all 0.3s ease;
+    }
+
+    /* Shift toggler button when menu is open so it's not hidden behind the drawer */
+    .nav-toggler.open {
+        left: 285px !important;
+    }
+
+    body.aside-right .nav-toggler {
+        left: auto !important;
+        right: 20px !important;
+    }
+
+    body.aside-right .nav-toggler.open {
+        right: 285px !important;
+        left: auto !important;
+    }
+}
