@@ -818,3 +818,84 @@ body.dark .featured-blog-content .article-tags .tag {
 /*//////////////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////////////////////////////////////*/
 
+@media (max-width: 991px) {
+    /* 1. Force Sidebar off-screen by default */
+    .aside {
+        position: fixed;
+        top: 0;
+        left: -270px; /* Hidden off to the left */
+        width: 270px;
+        height: 100vh;
+        z-index: 1000;
+        background: var(--bg-black-100);
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: none;
+    }
+
+    /* 2. Slide into view when opened */
+    .aside.open {
+        left: 0;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    }
+
+    /* If aside-right is selected in Theme Settings */
+    body.aside-right .aside {
+        left: auto;
+        right: -270px;
+        transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    body.aside-right .aside.open {
+        right: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    /* Fixed screen toggler button */
+    .nav-toggler {
+        display: flex !important;
+        position: fixed !important;
+        top: 20px !important;
+        left: 20px !important;
+        right: auto !important;
+        height: 40px;
+        width: 44px;
+        border: 1px solid var(--bg-black-50);
+        border-radius: 8px;
+        background: var(--bg-black-100);
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        z-index: 1001; /* Must stay above aside */
+        transition: all 0.3s ease;
+    }
+
+    /* Move toggler inward when sidebar opens so user can close it easily */
+    .aside.open + .nav-toggler,
+    .nav-toggler.open {
+        left: 285px !important; /* Positions it right outside the 270px drawer */
+    }
+
+    body.aside-right .nav-toggler {
+        left: auto !important;
+        right: 20px !important;
+    }
+
+    body.aside-right .nav-toggler.open {
+        right: 285px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .main-content {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Ensure Home section has enough top space for the hamburger icon */
+    .home.section .container {
+        padding-top: 80px;
+    }
+}
