@@ -34,14 +34,6 @@ ul
 {
     list-style: none;
 }
-.section
-{
-    min-height: 100vh;
-    background: var(--bg-black-900);
-    display: block;
-    padding: 0 30px;
-    opacity: 1;
-}
 .hidden
 {
     display: none !important;
@@ -349,6 +341,80 @@ body.dark .featured-blog-content .article-tags .tag {
 /*//////////////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////////////////////////////////////*/
 
+
+/* ================== Section Display & Entrance Transitions ================== */
+
+/* Base Section */
+.section {
+    min-height: 100vh;
+    background: var(--bg-black-900);
+    padding: 0 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Hidden Section State (Immediate layout collapse) */
+.section.hidden {
+    display: none !important;
+}
+
+/* Active Section Entrance State */
+.section.active {
+    display: block;
+    animation: sectionFadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Section Entrance Animation */
+@keyframes sectionFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================== Element Staggered Entrance ================== */
+
+/* Stagger cards and titles when section mounts */
+.section.active .section-title,
+.section.active .about-content,
+.section.active .stat-card,
+.section.active .timeline-item,
+.section.active .certificate-card,
+.section.active .roadmap-step,
+.section.active .category-box,
+.section.active .project-card,
+.section.active .blog-card,
+.section.active .form-container,
+.section.active .info-card {
+    animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Staggered entry delays */
+.section.active .section-title { animation-delay: 0.05s; }
+.section.active .stat-card:nth-child(1), .section.active .project-item:nth-child(1), .section.active .blog-item:nth-child(1) { animation-delay: 0.1s; }
+.section.active .stat-card:nth-child(2), .section.active .project-item:nth-child(2), .section.active .blog-item:nth-child(2) { animation-delay: 0.18s; }
+.section.active .stat-card:nth-child(3), .section.active .project-item:nth-child(3), .section.active .blog-item:nth-child(3) { animation-delay: 0.26s; }
+.section.active .stat-card:nth-child(4), .section.active .project-item:nth-child(4), .section.active .blog-item:nth-child(4) { animation-delay: 0.34s; }
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth Progress Bar Expansion Animation */
+.section.active .progress-bar {
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 
 /*//////////////////////////////////////////////////////////////////////////////////////*/
