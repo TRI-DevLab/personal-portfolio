@@ -420,7 +420,400 @@ body.dark .featured-blog-content .article-tags .tag {
 /*//////////////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////////////////////////////////////*/
 
+/* ==========================================================================
+   Responsive Breakpoints: Tablets, Mobile & Modals
+   ========================================================================== */
 
+/* -------------------------------------------------------------
+   1. Large Tablets & Small Laptops (max-width: 1199px)
+   ------------------------------------------------------------- */
+@media (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .project-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .portfolio-stats .stat-card {
+        min-width: 140px;
+    }
+}
+
+/* -------------------------------------------------------------
+   2. Portrait Tablets (max-width: 991px)
+   ------------------------------------------------------------- */
+@media (max-width: 991px) {
+    /* Main Layout Reset */
+    .main-content {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    body.aside-right .main-content {
+        padding-right: 0 !important;
+    }
+
+    /* Off-Canvas Sidebar */
+    .aside {
+        left: -270px;
+        z-index: 1000;
+        transition: left 0.3s ease;
+    }
+
+    .aside.open {
+        left: 0;
+    }
+
+    body.aside-right .aside {
+        left: auto;
+        right: -270px;
+        transition: right 0.3s ease;
+    }
+
+    body.aside-right .aside.open {
+        right: 0;
+    }
+
+    /* Mobile Hamburger Toggler */
+    .nav-toggler {
+        display: flex !important;
+        position: fixed;
+        left: 20px;
+        top: 20px;
+        z-index: 1001;
+        height: 40px;
+        width: 45px;
+        border: 1px solid var(--bg-black-50);
+        border-radius: 5px;
+        background: var(--bg-black-100);
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Support Toggler on Right when body.aside-right is active */
+    body.aside-right .nav-toggler {
+        left: auto;
+        right: 20px;
+    }
+
+    .nav-toggler span {
+        height: 2px;
+        width: 18px;
+        background: var(--skin-color);
+        display: inline-block;
+        position: relative;
+    }
+
+    .nav-toggler.open span {
+        background-color: transparent;
+    }
+
+    .nav-toggler span::before,
+    .nav-toggler span::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: var(--skin-color);
+        left: 0;
+        transition: all 0.3s ease;
+    }
+
+    .nav-toggler span::before { top: -6px; }
+    .nav-toggler span::after { top: 6px; }
+
+    .nav-toggler.open span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .nav-toggler.open span::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    /* Featured Project & Article Card Stacking */
+    .featured-card,
+    .featured-article-card {
+        flex-direction: column;
+    }
+
+    .featured-img,
+    .featured-content,
+    .featured-blog-img,
+    .featured-blog-content {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .featured-img {
+        min-height: 200px;
+    }
+
+    .featured-content {
+        padding: 25px 20px;
+    }
+
+    /* Blog Reader Overlay */
+    .blog-reader-overlay {
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        padding: 20px 15px;
+    }
+
+    .blog-reader-container {
+        padding: 25px 20px;
+    }
+
+    /* Contact Section Stacking */
+    .contact-form-wrap,
+    .contact-info-wrap {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .contact-info-wrap {
+        margin-top: 30px;
+    }
+
+    /* Footer Columns */
+    .footer-col {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 25px;
+    }
+}
+
+/* -------------------------------------------------------------
+   3. Mobile Phones (max-width: 767px)
+   ------------------------------------------------------------- */
+@media (max-width: 767px) {
+    /* Container & Section Padding */
+    .section {
+        padding: 0 15px;
+    }
+
+    .section .container {
+        padding-top: 75px;
+        padding-bottom: 40px;
+    }
+
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    /* Home Hero Layout */
+    .home-info,
+    .home-img {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .home-img {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .home-img img {
+        max-width: 200px;
+    }
+
+    .home-info .social-links {
+        justify-content: center;
+    }
+
+    /* Stats Grid */
+    .portfolio-stats {
+        gap: 10px;
+    }
+
+    .portfolio-stats .stat-card {
+        flex: 0 0 calc(50% - 5px);
+        min-width: unset;
+        padding: 15px 10px;
+    }
+
+    /* Project Cards to 1 Column */
+    .project-item,
+    .blog-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /* Filter Bar Stacking */
+    .portfolio-filter-bar,
+    .blog-filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .filter-buttons {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .filter-btn,
+    .blog-filter-btn {
+        flex-shrink: 0;
+    }
+
+    /* Project Details Modal Responsive Adaptations */
+    .project-modal {
+        padding: 12px;
+    }
+
+    .modal-content {
+        padding: 22px 18px;
+        max-height: 88vh;
+    }
+
+    .modal-preview-img {
+        height: 170px;
+    }
+
+    .modal-header-info h3 {
+        font-size: 20px;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .modal-actions .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* Footer Stacking */
+    .footer-col {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .footer-about .footer-quote {
+        margin: 0 auto;
+    }
+
+    .footer-socials {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+
+    /* Relocate Style Switcher so it avoids hamburger toggle collision */
+    .style-switcher {
+        top: 80px;
+    }
+}
+
+/* -------------------------------------------------------------
+   Under @media (max-width: 991px) — Tablets
+   ------------------------------------------------------------- */
+@media (max-width: 991px) {
+    /* Journey Timelines (Academic & Experience) Stack */
+    .journey .academic,
+    .journey .experience {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .journey .experience {
+        margin-top: 30px;
+    }
+
+    /* Skills Categories 2-Column on Tablet */
+    .skill-category {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 25px;
+    }
+
+    /* About Info & Progress Bars Stack */
+    .about-content .personal-info,
+    .about-content .interests {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .about-content .interests {
+        margin-top: 30px;
+    }
+}
+
+/* -------------------------------------------------------------
+   Under @media (max-width: 767px) — Mobile Phones
+   ------------------------------------------------------------- */
+@media (max-width: 767px) {
+    /* Skills Categories Single Column */
+    .skill-category {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /* About Stats Cards (2x2 Grid) */
+    .about-stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .about-stats .stat-card {
+        flex: 0 0 calc(50% - 6px);
+        margin: 0;
+    }
+
+    /* Personal Info Columns Stack */
+    .personal-info .info-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /* DevLab Splash Screen Responsive Shrink */
+    .lab-core {
+        padding: 24px 18px;
+    }
+
+    .lab-logo h1 {
+        font-size: 28px;
+    }
+
+    .terminal-box {
+        font-size: 11px;
+        line-height: 18px;
+        padding: 10px 14px;
+    }
+
+    .enter-btn {
+        padding: 12px;
+        font-size: 12px;
+    }
+}
 
 /*//////////////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////////////////////////////////////*/
