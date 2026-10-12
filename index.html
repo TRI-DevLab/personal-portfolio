@@ -48,9 +48,59 @@
         })();
     </script>
     
+    <!-- Prevent Splash Screen Flash for Returning Sessions -->
+    <script>
+        if (sessionStorage.getItem("devlab-entered") === "true") {
+            document.documentElement.classList.add("skip-splash");
+        }
+    </script>
+
 </head>
 
 <body>
+
+    <!-- ===== Interactive DevLab Opening Screen Start ===== -->
+    <div id="devlab-splash" class="devlab-splash">
+        <div class="lab-container">
+
+            <!-- Lab Header / Scanning Status -->
+            <div class="lab-header">
+                <div class="status-indicator-wrap">
+                    <span class="pulse-dot"></span>
+                    <span class="status-text">SYSTEM STATUS: <strong class="online-text">ONLINE</strong></span>
+                </div>
+            </div>
+
+            <!-- Central Interactive Lab Terminal -->
+            <div class="lab-core shadow-dark">
+                <div class="cyber-ring"></div>
+                <div class="lab-logo">
+                    <h1>TRI-DevLab</h1>
+                    <p class="subtitle">ENGINEERING & INNOVATION LAB</p>
+                </div>
+
+                <!-- Terminal Diagnostic Logs -->
+                <div class="terminal-box">
+                    <p class="log-line">> Initializing DevLab Core Modules...</p>
+                    <p class="log-line">> Loading Full-Stack, Machine Learning & Robotics Drivers...</p>
+                    <p class="log-line">> Status: Ready for Authorization.</p>
+                </div>
+
+                <!-- Interactive Entry Button -->
+                <button id="enter-lab-btn" class="btn enter-btn">
+                    <i class="fas fa-fingerprint"></i> INITIALIZE LAB PROTOCOL
+                </button>
+            </div>
+
+            <!-- Quick Skip Option for Recruiters -->
+            <div class="lab-footer">
+                <button id="skip-splash-btn" class="skip-btn">Skip Intro &rarr;</button>
+            </div>
+
+        </div>
+    </div>
+    <!-- ===== Interactive DevLab Opening Screen End ===== -->
+
     <!-- ===== Main Container Start ===== -->
     <div class="main-container">
 

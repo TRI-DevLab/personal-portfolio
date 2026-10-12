@@ -1,0 +1,164 @@
+/* ===== DevLab Opening Splash Screen ===== */
+html.skip-splash #devlab-splash {
+    display: none !important;
+}
+
+body.splash-active {
+    overflow: hidden !important;
+}
+
+.devlab-splash {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #0d0e12;
+    background-image: 
+        radial-gradient(color-mix(in srgb, var(--skin-color, #ec1839) 15%, transparent) 1px, transparent 0),
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px, 20px 20px, 20px 20px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.6s cubic-bezier(0.77, 0, 0.175, 1), visibility 0.6s ease;
+}
+
+.devlab-splash.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.lab-container {
+    width: 90%;
+    max-width: 540px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.lab-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #8a8d9b;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.status-indicator-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pulse-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #28a745;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #28a745;
+    animation: labPulse 1.5s infinite;
+}
+
+@keyframes labPulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(40, 167, 69, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+}
+
+.online-text {
+    color: #28a745;
+}
+
+.lab-core {
+    background: #15171e;
+    border: 1px solid var(--skin-color, #ec1839);
+    border-radius: 16px;
+    padding: 35px 28px;
+    position: relative;
+    box-shadow: 0 0 30px color-mix(in srgb, var(--skin-color, #ec1839) 20%, transparent);
+}
+
+.lab-logo h1 {
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 38px;
+    color: #ffffff;
+    margin-bottom: 4px;
+    letter-spacing: 2px;
+}
+
+.lab-logo .subtitle {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--skin-color, #ec1839);
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+}
+
+/* Staggered Terminal Logs */
+.terminal-box {
+    background: #090a0d;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 14px 18px;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    color: #28a745;
+    margin-bottom: 25px;
+    line-height: 22px;
+}
+
+.terminal-box .log-line {
+    opacity: 0;
+    transform: translateY(4px);
+    animation: terminalFade 0.4s ease forwards;
+}
+
+.terminal-box .log-line:nth-child(1) { animation-delay: 0.2s; }
+.terminal-box .log-line:nth-child(2) { animation-delay: 0.6s; }
+.terminal-box .log-line:nth-child(3) { animation-delay: 1.0s; }
+
+@keyframes terminalFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.enter-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 15px color-mix(in srgb, var(--skin-color, #ec1839) 40%, transparent);
+}
+
+.enter-btn:hover {
+    box-shadow: 0 0 25px color-mix(in srgb, var(--skin-color, #ec1839) 70%, transparent);
+}
+
+.lab-footer {
+    margin-top: 18px;
+}
+
+.skip-btn {
+    background: transparent;
+    border: none;
+    color: #8a8d9b;
+    font-size: 13px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.skip-btn:hover {
+    color: #ffffff;
+}
