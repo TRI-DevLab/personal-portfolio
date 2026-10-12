@@ -1,78 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave+Display&display=swap');
-:root
-{
-    --bg-black-900:#f2f2f2;
-    --bg-black-100:#fdf9ff;
-    --bg-black-50:#e8dfec;
-    --text-black-900:#302e4d;
-    --text-black-700:#504e70;
+
+:root {
+    --bg-black-900: #f2f2f2;
+    --bg-black-100: #fdf9ff;
+    --bg-black-50: #e8dfec;
+    --text-black-900: #302e4d;
+    --text-black-700: #504e70;
 
     /* Primary accent color */
     --skin-color: #ec1839;
 }
-body
-{
+
+body {
     margin: 0;
     padding: 0;
     line-height: 1.5;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
 }
-*
-{
+
+* {
     margin: 0;
     padding: 0;
     outline: none;
     text-decoration: none;
     box-sizing: border-box;
 }
-::before,::after
-{
+
+::before, ::after {
     box-sizing: border-box;
 }
-ul
-{
+
+ul {
     list-style: none;
 }
-.hidden
-{
+
+.hidden {
     display: none !important;
 }
-.main-content
-{
+
+.main-content {
     padding-left: 270px;
 }
-.padd-15
-{
+
+.padd-15 {
     padding-left: 15px;
     padding-right: 15px;
 }
-.container
-{
+
+.container {
     max-width: 1100px;
     width: 100%;
     margin: auto;
 }
-.section .container
-{
+
+.section .container {
     padding-top: 60px;
     padding-bottom: 70px;
 }
-.section-title
-{
+
+.section-title {
     flex: 0 0 100%;
     max-width: 100%;
     margin-bottom: 60px;
 }
-.section-title h2
-{
+
+.section-title h2 {
     font-size: 40px;
     font-weight: 700;
     color: var(--text-black-900);
     position: relative;
 }
-.section-title h2::before
-{
+
+.section-title h2::before {
     content: '';
     position: absolute;
     width: 50px;
@@ -81,8 +81,8 @@ ul
     top: 100%;
     left: 0;
 }
-.section-title h2::after
-{
+
+.section-title h2::after {
     content: '';
     position: absolute;
     width: 25px;
@@ -92,16 +92,16 @@ ul
     left: 0;
     margin-top: 8px;
 }
-.row
-{
+
+.row {
     display: flex;
     flex-wrap: wrap;
     margin-left: -15px;
     margin-right: -15px;
     position: relative;
 }
-.btn
-{
+
+.btn {
     display: inline-block;
     font-size: 13px;
     font-weight: 600;
@@ -115,22 +115,14 @@ ul
     background: var(--skin-color);
     transition: all 0.3s ease;
 }
-.btn:hover
-{
+
+.btn:hover {
     transform: translateY(-3px);
 }
-.shadow-dark
-{
+
+.shadow-dark {
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
-
-/*//////////////////////////////////////////////////////////////////////////////////////*/
-/*//////////////////////////////////////////////////////////////////////////////////////*/
-
-
-
-/*//////////////////////////////////////////////////////////////////////////////////////*/
-/*//////////////////////////////////////////////////////////////////////////////////////*/
 
 /* ===== Style Switcher Panel ===== */
 .style-switcher {
@@ -189,11 +181,8 @@ ul
     font-weight: 600;
     color: var(--text-black-700);
     margin-bottom: 8px;
-}   
+}
 
-/* ///////////////////////////////////////////////////////////////////////////// */
-
-/* Color Dots */
 .style-switcher .colors {
     display: flex;
     justify-content: space-between;
@@ -219,9 +208,6 @@ ul
     transform: scale(1.1);
 }
 
-/* ///////////////////////////////////////////////////////////////////////////// */
-
-/* Nav Position Selector Buttons */
 .nav-position-options {
     display: flex;
     gap: 8px;
@@ -246,9 +232,6 @@ ul
     border-color: var(--skin-color);
 }
 
-/* ///////////////////////////////////////////////////////////////////////////// */
-
-/* Day/Night Toggle Button */
 .day-night {
     height: 35px;
     width: 35px;
@@ -262,8 +245,6 @@ ul
     color: var(--skin-color);
     font-size: 16px;
 }
-
-/* ///////////////////////////////////////////////////////////////////////////// */
 
 /* ===== Right Sidebar Alignment Rules ===== */
 body.aside-right .aside {
@@ -282,8 +263,6 @@ body.aside-right .footer {
     padding-left: 0;
 }
 
-/* ///////////////////////////////////////////////////////////////////////////// */
-
 /* ===== Dark Theme Variables Overrides ===== */
 body.dark {
     --bg-black-900: #151515;
@@ -293,43 +272,28 @@ body.dark {
     --text-black-700: #e8e8e8;
 }
 
-/* Dark Mode Featured Project Text Visibility Fix */
 body.dark .featured-project-wrap .title,
 body.dark .featured-content h4,
 body.dark .featured-content .featured-desc,
-body.dark .featured-content .project-challenge {
+body.dark .featured-content .project-challenge,
+body.dark .featured-article-wrap .title,
+body.dark .featured-blog-content h4 {
     color: var(--text-black-900) !important;
 }
 
-/* Ensure secondary text in dark mode remains readable */
 body.dark .featured-content .featured-desc,
-body.dark .featured-content .project-challenge {
+body.dark .featured-content .project-challenge,
+body.dark .featured-blog-content p,
+body.dark .featured-blog-content .article-meta,
+body.dark .featured-blog-content .post-date,
+body.dark .featured-blog-content .read-time {
     color: var(--text-black-700) !important;
 }
 
-/* Fix for featured tag background and text in dark mode */
 body.dark .featured-tag {
     background: rgba(236, 24, 57, 0.2);
     color: var(--skin-color);
     border: 1px solid var(--skin-color);
-}
-
-/* Dark Mode Featured Article Text Visibility Fix */
-body.dark .featured-article-wrap .title,
-body.dark .featured-blog-content h4,
-body.dark .featured-blog-content p {
-    color: var(--text-black-900) !important;
-}
-
-body.dark .featured-blog-content p {
-    color: var(--text-black-700) !important;
-}
-
-/* Fix article metadata and tags in dark mode */
-body.dark .featured-blog-content .article-meta,
-body.dark .featured-blog-content .post-date,
-body.dark .featured-blog-content .read-time {
-    color: var(--text-black-700);
 }
 
 body.dark .featured-blog-content .article-tags .tag {
@@ -338,13 +302,7 @@ body.dark .featured-blog-content .article-tags .tag {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/*//////////////////////////////////////////////////////////////////////////////////////*/
-/*//////////////////////////////////////////////////////////////////////////////////////*/
-
-
 /* ================== Section Display & Entrance Transitions ================== */
-
-/* Base Section */
 .section {
     min-height: 100vh;
     background: var(--bg-black-900);
@@ -353,18 +311,15 @@ body.dark .featured-blog-content .article-tags .tag {
     box-sizing: border-box;
 }
 
-/* Hidden Section State (Immediate layout collapse) */
 .section.hidden {
     display: none !important;
 }
 
-/* Active Section Entrance State */
 .section.active {
     display: block;
     animation: sectionFadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Section Entrance Animation */
 @keyframes sectionFadeIn {
     0% {
         opacity: 0;
@@ -376,9 +331,6 @@ body.dark .featured-blog-content .article-tags .tag {
     }
 }
 
-/* ================== Element Staggered Entrance ================== */
-
-/* Stagger cards and titles when section mounts */
 .section.active .section-title,
 .section.active .about-content,
 .section.active .stat-card,
@@ -393,7 +345,6 @@ body.dark .featured-blog-content .article-tags .tag {
     animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-/* Staggered entry delays */
 .section.active .section-title { animation-delay: 0.05s; }
 .section.active .stat-card:nth-child(1), .section.active .project-item:nth-child(1), .section.active .blog-item:nth-child(1) { animation-delay: 0.1s; }
 .section.active .stat-card:nth-child(2), .section.active .project-item:nth-child(2), .section.active .blog-item:nth-child(2) { animation-delay: 0.18s; }
@@ -411,552 +362,6 @@ body.dark .featured-blog-content .article-tags .tag {
     }
 }
 
-/* Smooth Progress Bar Expansion Animation */
 .section.active .progress-bar {
     transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-
-/*//////////////////////////////////////////////////////////////////////////////////////*/
-/*//////////////////////////////////////////////////////////////////////////////////////*/
-
-/* ==========================================================================
-   Responsive Breakpoints: Tablets, Mobile & Modals
-   ========================================================================== */
-
-/* -------------------------------------------------------------
-   1. Large Tablets & Small Laptops (max-width: 1199px)
-   ------------------------------------------------------------- */
-@media (max-width: 1199px) {
-    .container {
-        max-width: 960px;
-    }
-    
-    .project-item {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-
-    .portfolio-stats .stat-card {
-        min-width: 140px;
-    }
-}
-
-/* -------------------------------------------------------------
-   2. Portrait Tablets (max-width: 991px)
-   ------------------------------------------------------------- */
-@media (max-width: 991px) {
-    /* Main Layout Reset */
-    .main-content {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-
-    body.aside-right .main-content {
-        padding-right: 0 !important;
-    }
-
-    /* Off-Canvas Sidebar */
-    .aside {
-        left: -270px;
-        z-index: 1000;
-        transition: left 0.3s ease;
-    }
-
-    .aside.open {
-        left: 0;
-    }
-
-    body.aside-right .aside {
-        left: auto;
-        right: -270px;
-        transition: right 0.3s ease;
-    }
-
-    body.aside-right .aside.open {
-        right: 0;
-    }
-
-    /* Mobile Hamburger Toggler */
-    .nav-toggler {
-        display: flex !important;
-        position: fixed;
-        left: 20px;
-        top: 20px;
-        z-index: 1001;
-        height: 40px;
-        width: 45px;
-        border: 1px solid var(--bg-black-50);
-        border-radius: 5px;
-        background: var(--bg-black-100);
-        cursor: pointer;
-        align-items: center;
-        justify-content: center;
-    }
-
-    /* Support Toggler on Right when body.aside-right is active */
-    body.aside-right .nav-toggler {
-        left: auto;
-        right: 20px;
-    }
-
-    .nav-toggler span {
-        height: 2px;
-        width: 18px;
-        background: var(--skin-color);
-        display: inline-block;
-        position: relative;
-    }
-
-    .nav-toggler.open span {
-        background-color: transparent;
-    }
-
-    .nav-toggler span::before,
-    .nav-toggler span::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: var(--skin-color);
-        left: 0;
-        transition: all 0.3s ease;
-    }
-
-    .nav-toggler span::before { top: -6px; }
-    .nav-toggler span::after { top: 6px; }
-
-    .nav-toggler.open span::before {
-        transform: rotate(45deg);
-        top: 0;
-    }
-
-    .nav-toggler.open span::after {
-        transform: rotate(-45deg);
-        top: 0;
-    }
-
-    /* Featured Project & Article Card Stacking */
-    .featured-card,
-    .featured-article-card {
-        flex-direction: column;
-    }
-
-    .featured-img,
-    .featured-content,
-    .featured-blog-img,
-    .featured-blog-content {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-
-    .featured-img {
-        min-height: 200px;
-    }
-
-    .featured-content {
-        padding: 25px 20px;
-    }
-
-    /* Blog Reader Overlay */
-    .blog-reader-overlay {
-        left: 0 !important;
-        right: 0 !important;
-        width: 100% !important;
-        padding: 20px 15px;
-    }
-
-    .blog-reader-container {
-        padding: 25px 20px;
-    }
-
-    /* Contact Section Stacking */
-    .contact-form-wrap,
-    .contact-info-wrap {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-
-    .contact-info-wrap {
-        margin-top: 30px;
-    }
-
-    /* Footer Columns */
-    .footer-col {
-        flex: 0 0 50%;
-        max-width: 50%;
-        margin-bottom: 25px;
-    }
-}
-
-/* -------------------------------------------------------------
-   3. Mobile Phones (max-width: 767px)
-   ------------------------------------------------------------- */
-@media (max-width: 767px) {
-    /* Container & Section Padding */
-    .section {
-        padding: 0 15px;
-    }
-
-    .section .container {
-        padding-top: 75px;
-        padding-bottom: 40px;
-    }
-
-    .section-title {
-        margin-bottom: 30px;
-    }
-
-    .section-title h2 {
-        font-size: 28px;
-    }
-
-    /* Home Hero Layout */
-    .home-info,
-    .home-img {
-        flex: 0 0 100%;
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .home-img {
-        margin-top: 25px;
-        display: flex;
-        justify-content: center;
-    }
-
-    .home-img img {
-        max-width: 200px;
-    }
-
-    .home-info .social-links {
-        justify-content: center;
-    }
-
-    /* Stats Grid */
-    .portfolio-stats {
-        gap: 10px;
-    }
-
-    .portfolio-stats .stat-card {
-        flex: 0 0 calc(50% - 5px);
-        min-width: unset;
-        padding: 15px 10px;
-    }
-
-    /* Project Cards to 1 Column */
-    .project-item,
-    .blog-item {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-
-    /* Filter Bar Stacking */
-    .portfolio-filter-bar,
-    .blog-filter-bar {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 12px;
-    }
-
-    .search-box {
-        width: 100%;
-    }
-
-    .filter-buttons {
-        justify-content: flex-start;
-        overflow-x: auto;
-        padding-bottom: 8px;
-        flex-wrap: nowrap;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .filter-btn,
-    .blog-filter-btn {
-        flex-shrink: 0;
-    }
-
-    /* Project Details Modal Responsive Adaptations */
-    .project-modal {
-        padding: 12px;
-    }
-
-    .modal-content {
-        padding: 22px 18px;
-        max-height: 88vh;
-    }
-
-    .modal-preview-img {
-        height: 170px;
-    }
-
-    .modal-header-info h3 {
-        font-size: 20px;
-    }
-
-    .modal-actions {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .modal-actions .btn {
-        width: 100%;
-        text-align: center;
-        justify-content: center;
-    }
-
-    /* Footer Stacking */
-    .footer-col {
-        flex: 0 0 100%;
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .footer-about .footer-quote {
-        margin: 0 auto;
-    }
-
-    .footer-socials {
-        justify-content: center;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-        gap: 12px;
-    }
-
-    /* Relocate Style Switcher so it avoids hamburger toggle collision */
-    .style-switcher {
-        top: 80px;
-    }
-}
-
-/* -------------------------------------------------------------
-   Under @media (max-width: 991px) — Tablets
-   ------------------------------------------------------------- */
-@media (max-width: 991px) {
-    /* Journey Timelines (Academic & Experience) Stack */
-    .journey .academic,
-    .journey .experience {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-
-    .journey .experience {
-        margin-top: 30px;
-    }
-
-    /* Skills Categories 2-Column on Tablet */
-    .skill-category {
-        flex: 0 0 50%;
-        max-width: 50%;
-        margin-bottom: 25px;
-    }
-
-    /* About Info & Progress Bars Stack */
-    .about-content .personal-info,
-    .about-content .interests {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-
-    .about-content .interests {
-        margin-top: 30px;
-    }
-}
-
-/* -------------------------------------------------------------
-   Under @media (max-width: 767px) — Mobile Phones
-   ------------------------------------------------------------- */
-@media (max-width: 767px) {
-    /* Skills Categories Single Column */
-    .skill-category {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-
-    /* About Stats Cards (2x2 Grid) */
-    .about-stats {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-
-    .about-stats .stat-card {
-        flex: 0 0 calc(50% - 6px);
-        margin: 0;
-    }
-
-    /* Personal Info Columns Stack */
-    .personal-info .info-item {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-
-    /* DevLab Splash Screen Responsive Shrink */
-    .lab-core {
-        padding: 24px 18px;
-    }
-
-    .lab-logo h1 {
-        font-size: 28px;
-    }
-
-    .terminal-box {
-        font-size: 11px;
-        line-height: 18px;
-        padding: 10px 14px;
-    }
-
-    .enter-btn {
-        padding: 12px;
-        font-size: 12px;
-    }
-}
-
-/*//////////////////////////////////////////////////////////////////////////////////////*/
-/*//////////////////////////////////////////////////////////////////////////////////////*/
-
-@media (max-width: 991px) {
-    /* 1. Force Sidebar off-screen by default */
-    .aside {
-        position: fixed;
-        top: 0;
-        left: -270px; /* Hidden off to the left */
-        width: 270px;
-        height: 100vh;
-        z-index: 1000;
-        background: var(--bg-black-100);
-        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: none;
-    }
-
-    /* 2. Slide into view when opened */
-    .aside.open {
-        left: 0;
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
-    }
-
-    /* If aside-right is selected in Theme Settings */
-    body.aside-right .aside {
-        left: auto;
-        right: -270px;
-        transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    body.aside-right .aside.open {
-        right: 0;
-    }
-}
-
-@media (max-width: 991px) {
-    /* Fixed screen toggler button */
-    .nav-toggler {
-        display: flex !important;
-        position: fixed !important;
-        top: 20px !important;
-        left: 20px !important;
-        right: auto !important;
-        height: 40px;
-        width: 44px;
-        border: 1px solid var(--bg-black-50);
-        border-radius: 8px;
-        background: var(--bg-black-100);
-        cursor: pointer;
-        align-items: center;
-        justify-content: center;
-        z-index: 1001; /* Must stay above aside */
-        transition: all 0.3s ease;
-    }
-
-    /* Move toggler inward when sidebar opens so user can close it easily */
-    .aside.open + .nav-toggler,
-    .nav-toggler.open {
-        left: 285px !important; /* Positions it right outside the 270px drawer */
-    }
-
-    body.aside-right .nav-toggler {
-        left: auto !important;
-        right: 20px !important;
-    }
-
-    body.aside-right .nav-toggler.open {
-        right: 285px !important;
-    }
-}
-
-@media (max-width: 991px) {
-    .main-content {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        width: 100%;
-        overflow-x: hidden;
-    }
-
-    /* Ensure Home section has enough top space for the hamburger icon */
-    .home.section .container {
-        padding-top: 80px;
-    }
-}
-
-/* ==========================================================================
-   Mobile & Tablet Aside Drawer Fix (max-width: 991px)
-   ========================================================================== */
-@media (max-width: 991px) {
-    /* 1. Default Left Sidebar (Hidden Off-Screen on Mobile) */
-    .aside {
-        position: fixed;
-        top: 0;
-        left: -270px !important;  /* Force it off-screen to the left */
-        right: auto !important;
-        width: 270px;
-        height: 100vh;
-        z-index: 1000;
-        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
-                    right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    /* Left Sidebar Opened State */
-    .aside.open {
-        left: 0 !important;
-    }
-
-    /* 2. Right Sidebar Alignment (When user toggled Right in theme switcher) */
-    body.aside-right .aside {
-        left: auto !important;
-        right: -270px !important; /* Force off-screen to the right */
-    }
-
-    /* Right Sidebar Opened State */
-    body.aside-right .aside.open {
-        right: 0 !important;
-        left: auto !important;
-    }
-
-    /* 3. Hamburger Button Adjustments */
-    .nav-toggler {
-        display: flex !important;
-        position: fixed !important;
-        top: 20px !important;
-        left: 20px !important;
-        right: auto !important;
-        z-index: 1001;
-        transition: all 0.3s ease;
-    }
-
-    /* Shift toggler button when menu is open so it's not hidden behind the drawer */
-    .nav-toggler.open {
-        left: 285px !important;
-    }
-
-    body.aside-right .nav-toggler {
-        left: auto !important;
-        right: 20px !important;
-    }
-
-    body.aside-right .nav-toggler.open {
-        right: 285px !important;
-        left: auto !important;
-    }
 }

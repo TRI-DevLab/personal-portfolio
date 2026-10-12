@@ -1,0 +1,345 @@
+/* ==========================================================================
+   TRI-DevLab Master Responsive Overrides (Loaded Last in <head>)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Large Tablets & Small Laptops (max-width: 1199px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .project-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .portfolio-stats .stat-card {
+        min-width: 140px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   2. Portrait Tablets & Mobile Devices (max-width: 991px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+    /* Layout Reset */
+    .main-content {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    body.aside-right .main-content {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .section .container {
+        padding-top: 85px !important;
+        padding-bottom: 50px !important;
+    }
+
+    /* Off-Canvas Sidebar */
+    .aside {
+        position: fixed !important;
+        top: 0 !important;
+        left: -270px !important;
+        right: auto !important;
+        width: 270px !important;
+        height: 100vh !important;
+        z-index: 1000 !important;
+        background: var(--bg-black-100) !important;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                    right 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    .aside.open {
+        left: 0 !important;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.4) !important;
+    }
+
+    body.aside-right .aside {
+        left: auto !important;
+        right: -270px !important;
+    }
+
+    body.aside-right .aside.open {
+        right: 0 !important;
+        left: auto !important;
+    }
+
+    /* Fixed Screen Hamburger Button */
+    .nav-toggler {
+        display: flex !important;
+        position: fixed !important;
+        top: 18px !important;
+        left: 20px !important;
+        right: auto !important;
+        z-index: 1001 !important;
+        background: var(--bg-black-100) !important;
+        border: 1px solid var(--bg-black-50) !important;
+        height: 42px !important;
+        width: 44px !important;
+        border-radius: 8px !important;
+        cursor: pointer !important;
+        align-items: center !important;
+        justify-content: center !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .nav-toggler.open {
+        left: 285px !important;
+    }
+
+    body.aside-right .nav-toggler {
+        left: auto !important;
+        right: 20px !important;
+    }
+
+    body.aside-right .nav-toggler.open {
+        right: 285px !important;
+        left: auto !important;
+    }
+
+    .style-switcher {
+        top: 75px !important;
+    }
+
+    /* Home Hero Layout */
+    .home-info,
+    .home-img {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+    }
+
+    .home-img {
+        margin-top: 30px !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .home-img img {
+        max-width: 240px !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .home-info .social-links {
+        justify-content: center !important;
+    }
+
+    /* About Section */
+    .about-content .about-text,
+    .about-content .personal-info,
+    .about-content .interests {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    .about-content .interests {
+        margin-top: 30px !important;
+    }
+
+    .about-stats {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 12px !important;
+        margin-top: 25px !important;
+        margin-bottom: 25px !important;
+    }
+
+    .about-stats .stat-card {
+        flex: 0 0 calc(50% - 6px) !important;
+        max-width: calc(50% - 6px) !important;
+    }
+
+    .personal-info .info-item {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+
+    /* Journey Section */
+    .journey-content .academic,
+    .journey-content .experience {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    .journey-content .experience {
+        margin-top: 40px !important;
+    }
+
+    /* Skills Categories */
+    .skill-category {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        margin-bottom: 25px !important;
+    }
+
+    /* Portfolio Section */
+    .portfolio-stats {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+    }
+
+    .portfolio-stats .stat-card {
+        flex: 0 0 calc(50% - 5px) !important;
+        max-width: calc(50% - 5px) !important;
+    }
+
+    .featured-card {
+        flex-direction: column !important;
+    }
+
+    .featured-img,
+    .featured-content {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .featured-img {
+        min-height: 200px !important;
+    }
+
+    /* Project Cards Stack to Single Column on Mobile/Tablet */
+    .project-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    .project-item {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* Blog Section */
+    .featured-article-card {
+        flex-direction: column !important;
+    }
+
+    .featured-blog-img,
+    .featured-blog-content {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    .blog-item {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .blog-reader-overlay {
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        padding: 20px 15px !important;
+    }
+
+    .blog-reader-container {
+        padding: 25px 20px !important;
+    }
+
+    /* Contact Section */
+    .contact-form-wrap,
+    .contact-info-wrap {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .contact-info-wrap {
+        margin-top: 35px !important;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+
+    .footer-col {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 30px !important;
+    }
+
+    .footer-about .footer-quote,
+    .footer-socials {
+        justify-content: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .footer-links li a {
+        justify-content: center !important;
+    }
+
+    .footer-bottom {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 12px !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   3. Small Mobile Phones (max-width: 576px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 576px) {
+    .section {
+        padding: 0 15px !important;
+    }
+
+    .section-title h2 {
+        font-size: 28px !important;
+    }
+
+    .personal-info .info-item {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    .about-stats .stat-card {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    .skill-category {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Splash Screen Scaling */
+    .lab-core {
+        padding: 24px 18px !important;
+    }
+
+    .lab-logo h1 {
+        font-size: 28px !important;
+    }
+
+    .terminal-box {
+        font-size: 11px !important;
+        line-height: 18px !important;
+        padding: 10px 14px !important;
+    }
+
+    .enter-btn {
+        padding: 12px !important;
+        font-size: 12px !important;
+    }
+}
