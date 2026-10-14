@@ -9,7 +9,7 @@ const projectDetails = {
         challenge: "Handling large datasets with fast lookup queries without freezing the desktop UI. Solved using indexed B-tree lookups in SQLite alongside background thread operations.",
         technologies: ["Python", "SQLite", "Tkinter", "VCL / Delphi", "Matplotlib"],
         liveUrl: "https://github.com/TRI-DevLab", // or your live demo URL
-        githubUrl: "https://github.com/TRI-DevLab"
+        githubUrl: "https://github.com/TRI-DevLab/Courier-Management-System"
     },
     "student-management": {
         title: "Student Management System",
@@ -25,13 +25,13 @@ const projectDetails = {
     "portfolio-site": {
         title: "Personal Engineering Portfolio",
         category: "Web Application • Vanilla Frontend",
-        image: "images/Nerd.jpg",
+        image: "assets/images/projects/TRI-DevLab-Portfolio.png",
         icon: "fas fa-globe",
         description: "Custom-architected responsive portfolio built from scratch with zero UI frameworks, featuring modular state management, custom style themes, and dynamic article rendering.",
         challenge: "Coordinating multi-theme stylesheet variables, history hash states, and mobile touch events without third-party libraries.",
         technologies: ["HTML5", "CSS3", "JavaScript", "EmailJS"],
-        liveUrl: "https://tri-devlab.github.io",
-        githubUrl: "https://github.com/TRI-DevLab"
+        liveUrl: "https://tri-devlab.github.io/personal-portfolio/",
+        githubUrl: "https://github.com/TRI-DevLab/personal-portfolio"
     },
     "weather-dashboard": {
         title: "Interactive Weather Dashboard",
