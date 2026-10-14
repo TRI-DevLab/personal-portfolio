@@ -4,8 +4,10 @@
     --bg-black-900: #f2f2f2;
     --bg-black-100: #fdf9ff;
     --bg-black-50: #e8dfec;
-    --text-black-900: #302e4d;
-    --text-black-700: #504e70;
+    
+    /* WCAG AA text tokens (> 4.5:1 contrast against light backgrounds) */
+    --text-black-900: #25233a;
+    --text-black-700: #3f3d56;
 
     /* Primary accent color */
     --skin-color: #ec1839;
@@ -33,6 +35,76 @@ body {
 
 ul {
     list-style: none;
+}
+
+/* ==========================================================================
+   Accessibility: Skip Link, Focus Indicators & Motion Preferences
+   ========================================================================== */
+
+/* Skip to Content link (Keyboard accessible) */
+.skip-link {
+    position: absolute;
+    top: -80px;
+    left: 20px;
+    background: var(--skin-color);
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 0 0 8px 8px;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 100000;
+    transition: top 0.2s ease-in-out;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+    top: 0;
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
+}
+
+/* Accessible Keyboard Focus Indicators */
+:focus {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 2px solid var(--skin-color) !important;
+    outline-offset: 3px !important;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+.filter-btn:focus-visible,
+.blog-filter-btn:focus-visible,
+.color-dot:focus-visible,
+.nav-pos-btn:focus-visible {
+    outline: 2px solid var(--skin-color) !important;
+    outline-offset: 3px !important;
+}
+
+/* Respect OS Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ==========================================================================
+   Structural Elements
+   ========================================================================== */
+
+main, nav, aside, article, header, section, footer {
+    display: block;
 }
 
 .hidden {

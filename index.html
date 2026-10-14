@@ -63,28 +63,31 @@
 
 <body>
 
+    <!-- ===== Accessible Skip to Main Content Link ===== -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- ===== Interactive DevLab Opening Screen Start ===== -->
-    <div id="devlab-splash" class="devlab-splash">
+    <div id="devlab-splash" class="devlab-splash" role="dialog" aria-modal="true" aria-labelledby="splash-title">
         <div class="lab-container">
 
             <!-- Lab Header / Scanning Status -->
             <div class="lab-header">
                 <div class="status-indicator-wrap">
-                    <span class="pulse-dot"></span>
+                    <span class="pulse-dot" aria-hidden="true"></span>
                     <span class="status-text">SYSTEM STATUS: <strong class="online-text">ONLINE</strong></span>
                 </div>
             </div>
 
             <!-- Central Interactive Lab Terminal -->
             <div class="lab-core shadow-dark">
-                <div class="cyber-ring"></div>
+                <div class="cyber-ring" aria-hidden="true"></div>
                 <div class="lab-logo">
                     <h1>TRI-DevLab</h1>
                     <p class="subtitle">ENGINEERING & INNOVATION LAB</p>
                 </div>
 
                 <!-- Terminal Diagnostic Logs -->
-                <div class="terminal-box">
+                <div class="terminal-box" role="region" aria-label="System diagnostic logs" aria-live="polite">
                     <p class="log-line">> Initializing DevLab Core Modules...</p>
                     <p class="log-line">> Loading Full-Stack, Machine Learning & Robotics Drivers...</p>
                     <p class="log-line">> Status: Ready for Authorization.</p>
@@ -92,7 +95,7 @@
 
                 <!-- Interactive Entry Button -->
                 <button id="enter-lab-btn" class="btn enter-btn">
-                    <i class="fas fa-fingerprint"></i> INITIALIZE LAB PROTOCOL
+                    <i class="fas fa-fingerprint" aria-hidden="true"></i> INITIALIZE LAB PROTOCOL
                 </button>
             </div>
 
@@ -109,30 +112,30 @@
     <div class="main-container">
 
         <!-- ===== Aside Start ===== -->
-        <div class="aside">
+        <nav class="aside" id="main-sidebar" aria-label="Main Navigation">
             <div class="logo">
                 <a href="">TRI-DevLab</a>
             </div>
-            <div class="nav-toggler">
-                <span></span>
+            <div class="nav-toggler" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-sidebar">
+                <span aria-hidden="true"></span>
             </div>
             <ul class="nav">
-                <li><a href="#home" class="active"><i class="fas fa-home"></i>Home</a></li>
-                <li><a href="#about"><i class="fas fa-user"></i>About</a></li>
-                <li><a href="#journey"><i class="fas fa-graduation-cap"></i>Journey</a></li>
-                <li><a href="#skills"><i class="fas fa-code"></i>Skills</a></li>
-                <li><a href="#portfolio"><i class="fas fa-briefcase"></i>Portfolio</a></li>
-                <li><a href="#blog"><i class="fas fa-blog"></i>Blog</a></li>
-                <li><a href="#contact"><i class="fas fa-envelope"></i>Contact</a></li>
+                <li><a href="#home" class="active"><i class="fas fa-home" aria-hidden="true"></i>Home</a></li>
+                <li><a href="#about"><i class="fas fa-user" aria-hidden="true"></i>About</a></li>
+                <li><a href="#journey"><i class="fas fa-graduation-cap" aria-hidden="true"></i>Journey</a></li>
+                <li><a href="#skills"><i class="fas fa-code" aria-hidden="true"></i>Skills</a></li>
+                <li><a href="#portfolio"><i class="fas fa-briefcase" aria-hidden="true"></i>Portfolio</a></li>
+                <li><a href="#blog"><i class="fas fa-blog" aria-hidden="true"></i>Blog</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope" aria-hidden="true"></i>Contact</a></li>
             </ul>
-        </div>
+        </nav>
         <!-- ===== Aside End ===== -->
 
         <!-- ===== Main Content Start ===== -->
-        <div class="main-content">
+        <div class="main-content" tabindex="-1">
 
             <!-- ===== Home Section Start ===== -->
-            <section class="home section active" id="home">
+            <section class="home section active" id="home" aria-label="Introduction">
                 <div class="container">
                     <div class="row">
                         <div class="home-info">
@@ -140,21 +143,21 @@
                             <h3 class="my-profession">I'm a <span class="typing">Software Developer | AI & Robotics
                                     Enthusiast</span></h3>
                             <p>
-                                I'm an aspiring software developer passionate about artificial intelligence,
+                                I'm an aspiring Engineer passionate about software development, artificial intelligence,
                                 robotics, and cybersecurity. I enjoy building modern web applications,
                                 exploring new technologies, and creating projects that solve real-world
                                 problems while continuously expanding my skills.
                             </p>
                             <a href="#about" class="btn">More About Me</a>
-                            <div class="social-links">
-                                <a href="https://github.com/TRI-DevLab" target="_blank">
-                                    <i class="fab fa-github"></i>
+                            <div class="social-links" aria-label="Social media profiles">
+                                <a href="https://github.com/TRI-DevLab" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
                                 </a>
-                                <a href="https://www.linkedin.com/in/tri-bam" target="_blank">
-                                    <i class="fab fa-linkedin"></i>
+                                <a href="https://www.linkedin.com/in/tri-bam" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                                    <i class="fab fa-linkedin" aria-hidden="true"></i>
                                 </a>
-                                <a href="https://www.youtube.com/@TRI-DevLab" target="_blank">
-                                    <i class="fab fa-youtube"></i>
+                                <a href="https://www.youtube.com/@TRI-DevLab" target="_blank" rel="noopener noreferrer" aria-label="YouTube Channel">
+                                    <i class="fab fa-youtube" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
@@ -167,7 +170,7 @@
             <!-- ===== Home Section End ===== -->
 
             <!-- ===== About Section Start ===== -->
-            <section class="about section hidden" id="about">
+            <section class="about section hidden" id="about" aria-label="About Me">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
@@ -180,7 +183,7 @@
                                 <div class="about-text padd-15">
                                     <h3>I'm <span>Triumphant Bamitale</span></h3>
                                     <p>
-                                        An aspiring Engineer who enjoys building software and learning new
+                                        An Engineer who enjoys building software and learning new
                                         technologies.
                                         I believe the best way to learn is by creating real projects that solve
                                         meaningful problems and continuously challenging myself to grow.
@@ -188,31 +191,35 @@
                                 </div>
                             </div>
                             <a href="#contact" class="btn">Hire Me</a>
-                            <a href="files/TRI_CV.pdf" class="btn" target="_blank">Download CV</a>
+                            <a href="files/TRI_CV.pdf" class="btn" target="_blank" rel="noopener noreferrer" aria-label="Download CV (PDF opens in new tab)">Download CV</a>
                             
                             <!-- ===== Stats Section ===== -->
                             <div class="about-stats">
-                            
+                                
+                                <!-- Stat 1 -->
                                 <div class="stat-card">
-                                    <i class="fas fa-laptop-code"></i>
+                                    <i class="fas fa-laptop-code" aria-hidden="true"></i>
                                     <h3>15+</h3>
                                     <p>Projects Built</p>
                                 </div>
-                            
+                                
+                                <!-- Stat 2 -->
                                 <div class="stat-card">
-                                    <i class="fas fa-microscope"></i>
+                                    <i class="fas fa-microscope" aria-hidden="true"></i>
                                     <h3>12</h3>
                                     <p>Research Topics</p>
                                 </div>
-                            
+                                
+                                <!-- Stat 3 -->
                                 <div class="stat-card">
-                                    <i class="fas fa-users"></i>
+                                    <i class="fas fa-users" aria-hidden="true"></i>
                                     <h3>6</h3>
                                     <p>Collaborations</p>
                                 </div>
-                            
+                                
+                                <!-- Stat 4 -->
                                 <div class="stat-card">
-                                    <i class="fas fa-microchip"></i>
+                                    <i class="fas fa-microchip" aria-hidden="true"></i>
                                     <h3>18+</h3>
                                     <p>Technologies Learned</p>
                                 </div>
@@ -226,25 +233,25 @@
                                 <div class="personal-info padd-15">
                                     <div class="row"> 
                                         <div class="info-item padd-15">
-                                            <p><span>Birthday:</span> 20th March 2002</p>
+                                            <p><span>Birthday:</span> 27th February 2008</p>
                                         </div>
                                         <div class="info-item padd-15">
-                                            <p><span>Age:</span> 22 Years</p>
+                                            <p><span>Languages:</span> English(Fluent)</p>
                                         </div>
                                         <div class="info-item padd-15">
-                                            <p><span>Website:</span> https://tri-devlab.github.io</p>
+                                            <p><span>Core Stack:</span> Python, JS, C++</p>
                                         </div>
                                         <div class="info-item padd-15">
-                                            <p><span>Email:</span> <a href="mailto:tri.devlab@gmail.com">tri.devlab@gmail.com</a></p>
+                                            <p><span>Current Focus:</span> Robotics & Data</p>
                                         </div>
                                         <div class="info-item padd-15">
-                                            <p><span>Phone:</span> +234 813 123 4567</p>
+                                            <p><span>Timezone:</span> UTC+2 / Flexible</p>
                                         </div>
                                         <div class="info-item padd-15">
-                                            <p><span>Degree:</span> Bachelor of CSS</p>
+                                            <p><span>Degree:</span> Engineering</p>
                                         </div>
                                         <div class="info-item padd-15">
-                                            <p><span>City:</span> Lagos, Nigeria</p>
+                                            <p><span>City:</span> East London, South Africa</p>
                                         </div>
                                         <div class="info-item padd-15">
                                             <p><span>Freelance:</span> Available</p>
@@ -253,43 +260,54 @@
                                 </div>
 
                                 <!-- Interests -->
-                                <div class="interests padd-15">
+                                <div class="interests padd-15" aria-label="Technical Interests & Proficiencies">
                                     <div class="row">
+
+                                        <!-- Interest item 1 -->
                                         <div class="interest-item padd-15">
                                             <h5>Full Stack Development</h5>
-                                            <div class="progress">
+                                            <div class="progress" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Full Stack Development proficiency 80%">
                                                 <div class="progress-bar" style="width: 80%;"></div>
                                                 <div class="interest-percentage">80%</div>
                                             </div>
                                         </div>
+
+                                        <!-- Interest item 2 -->
                                         <div class="interest-item padd-15">
                                             <h5>Software Development</h5>
-                                            <div class="progress">
+                                            <div class="progress" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" aria-label="Software Development proficiency 10%">
                                                 <div class="progress-bar" style="width: 10%;"></div>
                                                 <div class="interest-percentage">10%</div>
                                             </div>
                                         </div>
+
+                                        <!-- Interest item 3 -->
                                         <div class="interest-item padd-15">
                                             <h5>Machine Learning</h5>
-                                            <div class="progress">
+                                            <div class="progress" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" aria-label="Machine Learning proficiency 5%">
                                                 <div class="progress-bar" style="width: 5%;"></div>
                                                 <div class="interest-percentage">5%</div>
                                             </div>
                                         </div>
+
+                                        <!-- Interest item 4 -->
                                         <div class="interest-item padd-15">
                                             <h5>Robotics</h5>
-                                            <div class="progress">
+                                            <div class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Robotics proficiency 0%">
                                                 <div class="progress-bar" style="width: 0%;"></div>
                                                 <div class="interest-percentage">0%</div>
                                             </div>
                                         </div>
+
+                                        <!-- Interest item 5 -->
                                         <div class="interest-item padd-15">
                                             <h5>Cybersecurity</h5>
-                                            <div class="progress">
+                                            <div class="progress" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" aria-label="Cybersecurity proficiency 10%">
                                                 <div class="progress-bar" style="width: 10%;"></div>
                                                 <div class="interest-percentage">10%</div>
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
 
@@ -301,27 +319,33 @@
             <!-- ===== About Section End ===== -->
 
             <!-- ===== Journey Section Start ===== -->
-            <section class="journey section hidden" id="journey">
+            <section class="journey section hidden" id="journey" aria-label="My Educational and Professional Journey">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
                             <h2>Journey</h2>
                         </div>
                     </div>
+
+                    <!-- Main Content -->
                     <div class="row">
                         <div class="journey-content padd-15">
+
+                            <!-- Academic & Experience Timeline-->
                             <div class="row">
-                                 <!-- ===== Academic Section Start ===== -->
+
+                                <!-- ===== Academic Section Start ===== -->
                                 <div class="academic padd-15">
                                     <h3 class="title">Academic Timeline</h3>
                                     <div class="row">
                                         <div class="timeline-box padd-15">
                                             <div class="timeline shadow-dark">
-                                                <!-- ===== timeline item ===== --> 
+
+                                                <!-- ===== timeline item 1 ===== --> 
                                                 <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
+                                                    <div class="circle-dot" aria-hidden="true"></div>
                                                     <h3 class="timeline-date">
-                                                        <i class="fas fa-calendar"></i> 2020 - 2020
+                                                        <i class="fas fa-calendar" aria-hidden="true"></i> 2020 - 2020
                                                     </h3>
                                                     <h4 class="timeline-title">
                                                         Grade 8 - Windhoek Christian Academy
@@ -330,11 +354,12 @@
                                                         Where I started my highschool journey. 
                                                     </p>                                         
                                                 </div>
-                                                <!-- ===== timeline item ===== --> 
+
+                                                <!-- ===== timeline item 2 ===== --> 
                                                 <div class="timeline-item">
-                                                    <div class="circle-dot"></div> 
+                                                    <div class="circle-dot" aria-hidden="true"></div> 
                                                     <h3 class="timeline-date">
-                                                        <i class="fas fa-calendar"></i> 2021 - 2023
+                                                        <i class="fas fa-calendar" aria-hidden="true"></i> 2021 - 2023
                                                     </h3>
                                                     <h4 class="timeline-title">
                                                         Junior-Curro Academy Pretoria
@@ -343,11 +368,12 @@
                                                         Obtained a GET (General Education and Training) Certificate in Grade 9 from Curro Academy Pretoria.
                                                     </p>                                        
                                                 </div>
-                                                <!-- ===== timeline items ===== --> 
+
+                                                <!-- ===== timeline item 3 ===== --> 
                                                 <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
+                                                    <div class="circle-dot" aria-hidden="true"></div>
                                                     <h3 class="timeline-date">
-                                                       <i class="fas fa-calendar"></i> 2024 - 2025
+                                                       <i class="fas fa-calendar" aria-hidden="true"></i> 2024 - 2025
                                                     </h3>
                                                     <h4 class="timeline-title">
                                                         Senior - Selborne College
@@ -361,17 +387,19 @@
                                     </div>
                                 </div>
                                 <!-- ===== Academic Section End ===== -->
+
                                 <!-- ===== Experience Section Start ===== -->
                                 <div class="experience padd-15">
                                     <h3 class="title">Professional Experience</h3>
                                     <div class="row">
                                         <div class="timeline-box padd-15">
                                             <div class="timeline shadow-dark">
-                                                <!-- ===== timeline item ===== --> 
+
+                                                <!-- ===== timeline item 1 ===== --> 
                                                 <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
+                                                    <div class="circle-dot" aria-hidden="true"></div>
                                                     <h3 class="timeline-date">
-                                                        <i class="fas fa-calendar"></i> 2024 - 2025
+                                                        <i class="fas fa-calendar" aria-hidden="true"></i> 2024 - 2025
                                                     </h3>
                                                     <h4 class="timeline-title">
                                                         Created First Serious Project
@@ -381,11 +409,12 @@
                                                         I created this program for my Grade 12 PAT project it counted for 25% of my final Grade and I achieved a 93%. 
                                                     </p>                                         
                                                 </div>
-                                                <!-- ===== timeline item ===== --> 
+
+                                                <!-- ===== timeline item 2 ===== --> 
                                                 <div class="timeline-item">
-                                                    <div class="circle-dot"></div> 
+                                                    <div class="circle-dot" aria-hidden="true"></div> 
                                                     <h3 class="timeline-date">
-                                                        <i class="fas fa-calendar"></i> 2024 - 2026
+                                                        <i class="fas fa-calendar" aria-hidden="true"></i> 2024 - 2026
                                                     </h3>
                                                     <h4 class="timeline-title">
                                                         Camera Operator 
@@ -395,12 +424,14 @@
                                                         I collaborate with other team members to capture key moments, maintain smooth live coverage, and assist with camera setup and technical preparation.
                                                     </p>                                        
                                                 </div>
+
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- ===== Experience Section End ===== -->
                             </div>
+
                             <!-- ===== Certificates Section Start ===== -->
                             <div class="row">
                                 <div class="certificates padd-15">
@@ -408,35 +439,36 @@
                                     <div class="certificates-grid">
                             
                                         <!-- Certificate Card 1 -->
-                                        <div class="certificate-card shadow-dark">
-                                            <div class="cert-icon">
+                                        <article class="certificate-card shadow-dark">
+                                            <div class="cert-icon" aria-hidden="true">
                                                 <i class="fas fa-certificate"></i>
                                             </div>
                                             <h4 class="cert-title">Database Programming</h4>
                                             <p class="cert-issuer">UJ ACSSE Winter School</p>
-                                            <span class="cert-date"><i class="fas fa-calendar-alt"></i> July 2025</span>
-                                            <a href="https://example.com/credential" class="btn cert-btn" target="_blank">
-                                                Verify Credential <i class="fas fa-external-link-alt"></i>
+                                            <span class="cert-date"><i class="fas fa-calendar-alt" aria-hidden="true"></i> July 2025</span>
+                                            <a href="https://example.com/credential" class="btn cert-btn" target="_blank" rel="noopener noreferrer" aria-label="Verify Database Programming credential on external site">
+                                                Verify Credential <i class="fas fa-external-link-alt" aria-hidden="true"></i>
                                             </a>
-                                        </div>
+                                        </article>
                             
                                         <!-- Certificate Card 2 -->
-                                        <div class="certificate-card shadow-dark">
-                                            <div class="cert-icon">
+                                        <article class="certificate-card shadow-dark">
+                                            <div class="cert-icon" aria-hidden="true">
                                                 <i class="fas fa-award"></i>
                                             </div>
                                             <h4 class="cert-title">Data Science & Machine Learning</h4>
                                             <p class="cert-issuer">edX / Coursera</p>
-                                            <span class="cert-date"><i class="fas fa-calendar-alt"></i> December 2025</span>
-                                            <a href="https://example.com/credential" class="btn cert-btn" target="_blank">
-                                                Verify Credential <i class="fas fa-external-link-alt"></i>
+                                            <span class="cert-date"><i class="fas fa-calendar-alt" aria-hidden="true"></i> December 2025</span>
+                                            <a href="https://example.com/credential" class="btn cert-btn" target="_blank" rel="noopener noreferrer" aria-label="Verify Data Science & Machine Learning credential on external site">
+                                                Verify Credential <i class="fas fa-external-link-alt" aria-hidden="true"></i>
                                             </a>
-                                        </div>
+                                        </article>
                             
                                     </div>
                                 </div>
                             </div>
                             <!-- ===== Certificates Section End ===== -->
+
                             <!-- ===== Learning Journey / Roadmap Start ===== -->
                             <div class="row">
                                 <div class="learning-roadmap padd-15">
@@ -445,9 +477,9 @@
                             
                                         <!-- Roadmap Step 1 -->
                                         <div class="roadmap-step shadow-dark">
-                                            <div class="step-number">01</div>
+                                            <div class="step-number" aria-hidden="true">01</div>
                                             <div class="step-content">
-                                                <span class="step-status completed"><i class="fas fa-check-circle"></i> Completed</span>
+                                                <span class="step-status completed"><i class="fas fa-check-circle" aria-hidden="true"></i> Completed</span>
                                                 <h4 class="step-title">Foundations & Web Dev</h4>
                                                 <p class="step-desc">Mastered HTML, CSS, JavaScript, and database fundamentals.</p>
                                             </div>
@@ -455,9 +487,9 @@
                             
                                         <!-- Roadmap Step 2 -->
                                         <div class="roadmap-step shadow-dark">
-                                            <div class="step-number">02</div>
+                                            <div class="step-number" aria-hidden="true">02</div>
                                             <div class="step-content">
-                                                <span class="step-status active"><i class="fas fa-spinner fa-spin"></i> In Progress</span>
+                                                <span class="step-status active"><i class="fas fa-spinner fa-spin" aria-hidden="true"></i> In Progress</span>
                                                 <h4 class="step-title">Full-Stack & Systems</h4>
                                                 <p class="step-desc">Building modern web applications and exploring advanced backend architectures.
                                                 </p>
@@ -466,9 +498,9 @@
                             
                                         <!-- Roadmap Step 3 -->
                                         <div class="roadmap-step shadow-dark">
-                                            <div class="step-number">03</div>
+                                            <div class="step-number" aria-hidden="true">03</div>
                                             <div class="step-content">
-                                                <span class="step-status upcoming"><i class="fas fa-hourglass-start"></i> Next Up</span>
+                                                <span class="step-status upcoming"><i class="fas fa-hourglass-start" aria-hidden="true"></i> Next Up</span>
                                                 <h4 class="step-title">Data Science & AI</h4>
                                                 <p class="step-desc">Diving into machine learning models, data analysis, and intelligent algorithms.
                                                 </p>
@@ -477,9 +509,9 @@
                             
                                         <!-- Roadmap Step 4 -->
                                         <div class="roadmap-step shadow-dark">
-                                            <div class="step-number">04</div>
+                                            <div class="step-number" aria-hidden="true">04</div>
                                             <div class="step-content">
-                                                <span class="step-status upcoming"><i class="fas fa-bullseye"></i> Future Goal</span>
+                                                <span class="step-status upcoming"><i class="fas fa-bullseye" aria-hidden="true"></i> Future Goal</span>
                                                 <h4 class="step-title">Robotics & Cybersecurity</h4>
                                                 <p class="step-desc">Integrating AI with hardware systems and exploring advanced security practices.
                                                 </p>
@@ -497,8 +529,9 @@
             <!-- ===== Journey Section End ===== -->
 
             <!-- ===== Skills Section Start ===== -->
-            <section class="skills section hidden" id="skills">
+            <section class="skills section hidden" id="skills" aria-label="Skills & Expertise">
                 <div class="container">
+
                     <!-- Section Header & Top Summary -->
                     <div class="row">
                         <div class="section-title padd-15">
@@ -515,34 +548,35 @@
 
                     <!-- Grouped Technical Skills with Descriptions -->
                     <div class="row">
+
                         <!-- Group 1: Web Development -->
                         <div class="skill-category padd-15">
                             <div class="category-box shadow-dark">
-                                <h3 class="category-title"><i class="fas fa-globe"></i> Web Development</h3>
+                                <h3 class="category-title"><i class="fas fa-globe" aria-hidden="true"></i> Web Development</h3>
                                 <p class="category-desc">
                                     Building responsible and accessible websites using modern web techniques.
                                 </p>
 
                                 <!-- Item 1 -->
                                 <div class="skill-item">
-                                    <div class="skill-info"><span>HTML</span><span>90%</span></div>
-                                    <div class="progress">
+                                    <div class="skill-info"><span>HTML</span><span aria-hidden="true">90%</span></div>
+                                    <div class="progress" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="HTML proficiency 90%">
                                         <div class="progress-bar" style="width: 90%;"></div>
                                     </div>
                                 </div>
 
                                 <!-- Item 2 -->
                                 <div class="skill-item">
-                                    <div class="skill-info"><span>CSS3</span><span>70%</span></div>
-                                    <div class="progress">
+                                    <div class="skill-info"><span>CSS3</span><span aria-hidden="true">70%</span></div>
+                                    <div class="progress" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="CSS3 proficiency 70%">
                                         <div class="progress-bar" style="width: 70%;"></div>
                                     </div>
                                 </div>
 
                                 <!-- Item 3 -->
                                 <div class="skill-item">
-                                    <div class="skill-info"><span>JavaScript (ES6+)</span><span>55%</span></div>
-                                    <div class="progress">
+                                    <div class="skill-info"><span>JavaScript (ES6+)</span><span aria-hidden="true">55%</span></div>
+                                    <div class="progress" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript proficiency 55%">
                                         <div class="progress-bar" style="width: 55%;"></div>
                                     </div>
                                 </div>
@@ -552,31 +586,31 @@
                         <!-- Group 2: Programming Languages -->
                         <div class="skill-category padd-15">
                             <div class="category-box shadow-dark">
-                                <h3 class="category-title"><i class="fas fa-code"></i> Programming Languages</h3>
+                                <h3 class="category-title"><i class="fas fa-code" aria-hidden="true"></i> Programming Languages</h3>
                                 <p class="category-desc">
                                     Developing applications and solving problems with programming.
                                 </p>
 
                                 <!-- Item 1 -->
                                 <div class="skill-item">
-                                    <div class="skill-info"><span>Python</span><span>30%</span></div>
-                                    <div class="progress">
+                                    <div class="skill-info"><span>Python</span><span aria-hidden="true">30%</span></div>
+                                    <div class="progress" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" aria-label="Python proficiency 30%">
                                         <div class="progress-bar" style="width: 30%;"></div>
                                     </div>
                                 </div>
 
                                 <!-- Item 2 -->
                                 <div class="skill-item">
-                                    <div class="skill-info"><span>Delphi / Object Pascal</span><span>70%</span></div>
-                                    <div class="progress">
+                                    <div class="skill-info"><span>Delphi / Object Pascal</span><span aria-hidden="true">70%</span></div>
+                                    <div class="progress" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Delphi and Object Pascal proficiency 70%">
                                         <div class="progress-bar" style="width: 70%;"></div>
                                     </div>
                                 </div>
 
                                 <!-- Item 3 -->
                                 <div class="skill-item">
-                                    <div class="skill-info"><span>SQL</span><span>40%</span></div>
-                                    <div class="progress">
+                                    <div class="skill-info"><span>SQL</span><span aria-hidden="true">40%</span></div>
+                                    <div class="progress" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" aria-label="SQL proficiency 40%">
                                         <div class="progress-bar" style="width: 40%;"></div>
                                     </div>
                                 </div>
@@ -589,30 +623,30 @@
                         <!-- Group 3: Computer Science Fundamentals -->
                         <div class="skill-category padd-15">
                             <div class="category-box shadow-dark">
-                                <h3 class="category-title"><i class="fas fa-brain"></i> Computer Science</h3>
+                                <h3 class="category-title"><i class="fas fa-brain" aria-hidden="true"></i> Computer Science</h3>
                                 <p class="category-desc">
                                     Understanding core software design principles, data structures, and algorithms.
                                 </p>
                             
                                 <!-- Item 1 -->
                                 <div class="skill-item">
-                                    <div class="skill-info"><span>Data Structures & Algorithms</span><span>10%</span></div>
-                                    <div class="progress">
+                                    <div class="skill-info"><span>Data Structures & Algorithms</span><span aria-hidden="true">10%</span></div>
+                                    <div class="progress" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" aria-label="Data Structures and Algorithms proficiency 10%">
                                         <div class="progress-bar" style="width: 10%;"></div>
                                     </div>
                                 </div>
                             
                                 <!-- Item 2 -->
                                 <div class="skill-item">
-                                    <div class="skill-info"><span>Object-Oriented Programming (OOP)</span><span>65%</span></div>
-                                    <div class="progress">
+                                    <div class="skill-info"><span>Object-Oriented Programming (OOP)</span><span aria-hidden="true">65%</span></div>
+                                    <div class="progress" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="OOP proficiency 65%">
                                         <div class="progress-bar" style="width: 65%;"></div>
                                     </div>
                                 </div>
                                 <!-- Item 3 -->
                                 <div class="skill-item">
-                                    <div class="skill-info"><span>Relational Database</span><span>15%</span></div>
-                                    <div class="progress">
+                                    <div class="skill-info"><span>Relational Database</span><span aria-hidden="true">15%</span></div>
+                                    <div class="progress" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" aria-label="Relational Database proficiency 15%">
                                         <div class="progress-bar" style="width: 15%;"></div>
                                     </div>
                                 </div>
@@ -623,18 +657,18 @@
                         <!-- Currently Learning -->
                         <div class="skill-category padd-15">
                             <div class="category-box shadow-dark highlight-learning">
-                                <h3 class="category-title"><i class="fas fa-rocket"></i> Currently Learning</h3>
+                                <h3 class="category-title"><i class="fas fa-rocket" aria-hidden="true"></i> Currently Learning</h3>
                                 <p class="category-desc">
                                     Actively expanding my domain knowledge through coursework and hands-on projects.
                                 </p>
 
                                 <!-- Badges -->
                                 <div class="badges-flex">
-                                    <span class="badge learning-badge"><i class="fab fa-react"></i> React</span>
-                                    <span class="badge learning-badge"><i class="fab fa-python"></i> Python</span>
-                                    <span class="badge learning-badge"><i class="fas fa-shield-alt"></i> CyberSecurity</span>
-                                    <span class="badge learning-badge"><i class="fas fa-robot"></i> Machine Learning</span>
-                                    <span class="badge learning-badge"><i class="fas fa-microchip"></i> Robotics</span>
+                                    <span class="badge learning-badge"><i class="fab fa-react" aria-hidden="true"></i> React</span>
+                                    <span class="badge learning-badge"><i class="fab fa-python" aria-hidden="true"></i> Python</span>
+                                    <span class="badge learning-badge"><i class="fas fa-shield-alt" aria-hidden="true"></i> CyberSecurity</span>
+                                    <span class="badge learning-badge"><i class="fas fa-robot" aria-hidden="true"></i> Machine Learning</span>
+                                    <span class="badge learning-badge"><i class="fas fa-microchip" aria-hidden="true"></i> Robotics</span>
                                     <!-- Data Science -->
                                 </div>
                             </div>
@@ -646,11 +680,11 @@
                         <div class="tools-wrapper padd-15">
                             <h3 class="title">Technologies I Enjoy Working With</h3>
                             <div class="badges-flex">
-                                <span class="badge fav-badge shadow-dark"><i class="fab fa-python"></i> Python</span>
-                                <span class="badge fav-badge shadow-dark"><i class="fab fa-js"></i> JavaScript</span>
-                                <span class="badge fav-badge shadow-dark"><i class="fab fa-html5"></i> HTML5</span>
-                                <span class="badge fav-badge shadow-dark"><i class="fab fa-css3-alt"></i> CSS3</span>
-                                <span class="badge fav-badge shadow-dark"><i class="fab fa-git-alt"></i> Git</span>
+                                <span class="badge fav-badge shadow-dark"><i class="fab fa-python" aria-hidden="true"></i> Python</span>
+                                <span class="badge fav-badge shadow-dark"><i class="fab fa-js" aria-hidden="true"></i> JavaScript</span>
+                                <span class="badge fav-badge shadow-dark"><i class="fab fa-html5" aria-hidden="true"></i> HTML5</span>
+                                <span class="badge fav-badge shadow-dark"><i class="fab fa-css3-alt" aria-hidden="true"></i> CSS3</span>
+                                <span class="badge fav-badge shadow-dark"><i class="fab fa-git-alt" aria-hidden="true"></i> Git</span>
                             </div>
                         </div>
                     </div>
@@ -660,13 +694,13 @@
                         <div class="tools-wrapper padd-15">
                             <h3 class="title">Tools & Software</h3>
                             <div class="badges-flex">
-                                <span class="badge tool-badge shadow-dark"><i class="fab fa-git-alt"></i> Git</span>
-                                <span class="badge tool-badge shadow-dark"><i class="fab fa-github"></i> GitHub</span>
-                                <span class="badge tool-badge shadow-dark"><i class="fas fa-code"></i> VS Code</span>
-                                <span class="badge tool-badge shadow-dark"><i class="fab fa-figma"></i> Figma</span>
-                                <span class="badge tool-badge shadow-dark"><i class="fas fa-paint-brush"></i> Canva</span>
-                                <span class="badge tool-badge shadow-dark"><i class="fas fa-database"></i> SQLite</span>
-                                <span class="badge tool-badge shadow-dark"><i class="fas fa-server"></i> SQL Server</span>
+                                <span class="badge tool-badge shadow-dark"><i class="fab fa-git-alt" aria-hidden="true"></i> Git</span>
+                                <span class="badge tool-badge shadow-dark"><i class="fab fa-github" aria-hidden="true"></i> GitHub</span>
+                                <span class="badge tool-badge shadow-dark"><i class="fas fa-code" aria-hidden="true"></i> VS Code</span>
+                                <span class="badge tool-badge shadow-dark"><i class="fab fa-figma" aria-hidden="true"></i> Figma</span>
+                                <span class="badge tool-badge shadow-dark"><i class="fas fa-paint-brush" aria-hidden="true"></i> Canva</span>
+                                <span class="badge tool-badge shadow-dark"><i class="fas fa-database" aria-hidden="true"></i> SQLite</span>
+                                <span class="badge tool-badge shadow-dark"><i class="fas fa-server" aria-hidden="true"></i> SQL Server</span>
                                 <!-- Jupyter Notebook -->
                                 <!-- Unity -->
                                 <!-- Oracle VirtualBox -->
@@ -681,37 +715,37 @@
                             <div class="soft-skills-grid">
                                 <!-- Soft Card 1 -->
                                 <div class="soft-card shadow-dark">
-                                    <i class="fas fa-puzzle-piece"></i>
+                                    <i class="fas fa-puzzle-piece" aria-hidden="true"></i>
                                     <h4>Problem Solving</h4>
                                 </div>
 
                                 <!-- Soft Card 2 -->
                                 <div class="soft-card shadow-dark">
-                                    <i class="fas fa-users"></i>
+                                    <i class="fas fa-users" aria-hidden="true"></i>
                                     <h4>Team Collaboration</h4>
                                 </div>
 
                                 <!-- Soft Card 3 -->
                                 <div class="soft-card shadow-dark">
-                                    <i class="fas fa-comments"></i>
+                                    <i class="fas fa-comments" aria-hidden="true"></i>
                                     <h4>Public Speaking</h4>
                                 </div>
 
                                 <!-- Soft Card 4 -->
                                 <div class="soft-card shadow-dark">
-                                    <i class="fas fa-tasks"></i>
+                                    <i class="fas fa-tasks" aria-hidden="true"></i>
                                     <h4>Project Planning</h4>
                                 </div>
 
-                                <!-- Soft Card 4 -->
+                                <!-- Soft Card 5 -->
                                 <div class="soft-card shadow-dark">
-                                    <i class="fas fa-lightbulb"></i>
+                                    <i class="fas fa-lightbulb" aria-hidden="true"></i>
                                     <h4>Critical Thinking</h4>
                                 </div>
 
                                 <!-- Soft Card 6 -->
                                 <div class="soft-card shadow-dark">
-                                    <i class="fas fa-graduation-cap"></i>
+                                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
                                     <h4>Continuous Learning</h4>
                                 </div>
                             </div>
@@ -723,8 +757,9 @@
             <!-- ===== Skills Section End ===== -->
 
             <!-- ===== Portfolio Section Start ===== -->
-            <section class="portfolio section hidden" id="portfolio">
+            <section class="portfolio section hidden" id="portfolio" aria-label="Portfolio and Software Projects">
                 <div class="container">
+
                     <!-- Section Title -->
                     <div class="row">
                         <div class="section-title padd-15">
@@ -735,27 +770,29 @@
                     <!-- Statistics Bar -->
                     <div class="row">
                         <div class="portfolio-stats padd-15">
+
                             <!-- Stat Card 1 -->
                             <div class="stat-card shadow-dark">
-                                <i class="fas fa-cube"></i>
+                                <i class="fas fa-cube" aria-hidden="true"></i>
                                 <h3>4+</h3>
                                 <p>Completed Projects</p>
                             </div>
+
                             <!-- Stat Card 2 -->
                             <div class="stat-card shadow-dark">
-                                <i class="fas fa-terminal"></i>
+                                <i class="fas fa-terminal" aria-hidden="true"></i>
                                 <h3>50+</h3>
                                 <p>Challenges Solved</p>
                             </div>
                             <!-- Stat Card 3 -->
                             <div class="stat-card shadow-dark">
-                                <i class="fas fa-folder-open"></i>
+                                <i class="fas fa-folder-open" aria-hidden="true"></i>
                                 <h3>4</h3>
                                 <p>Repositories</p>
                             </div>
                             <!-- Stat Card 4 -->
                             <div class="stat-card shadow-dark">
-                                <i class="fas fa-code-commit"></i>
+                                <i class="fas fa-code-commit" aria-hidden="true"></i>
                                 <h3>35</h3>
                                 <p>Contributions</p>
                             </div>
@@ -766,10 +803,11 @@
                     <div class="row">
                         <div class="featured-project-wrap padd-15">
                             <h3 class="title">Featured Projects</h3>
+
                             <!-- Featured Project 1 -->
-                            <div class="featured-card shadow-dark">
+                            <article class="featured-card shadow-dark" aria-labelledby="featured-project-title">
                                 <!-- Project Image -->
-                                <div class="featured-img">
+                                <div class="featured-img" aria-hidden="true">
                                     <div class="img-placeholder">
                                         <i class="fas fa-shipping-fast"></i>
                                         <span>Courier Systems Dashboard</span>
@@ -777,43 +815,45 @@
                                 </div>
                                 <!-- Project Details -->
                                 <div class="featured-content"> 
-                                    <span class="badge featured-tag"><i class="fas fa-star"></i> Top Project</span>
-                                    <h4>Courier Management System</h4>
+                                    <span class="badge featured-tag"><i class="fas fa-star" aria-hidden="true"></i> Top Project</span>
+                                    <h4 id="featured-project-title">Courier Management System</h4>
                                     <p class="featured-desc">
                                         Desktop application for managing courier deliveries, parcels, and customer records.
                                         Built with robust data handling and structured logs to streamline logistics workflow.
                                     </p>
                                     <div class="project-challenge">
-                                        <strong><i class="fa fas-lightbulb"></i>Challenge & Solution:</strong>
+                                        <strong><i class="fa fas-lightbulb" aria-hidden="true"></i>Challenge & Solution:</strong>
                                         Creating an efficient parcel search feature across large customer datasets.
                                         Implemented indexed database queries to reduce lookup times significantly.
                                     </div>
                                     <div class="badges-flex">
-                                        <span class="badge"><i class="fas fa-code"></i> Delphi / Object Pascal</span>
-                                        <span class="badge"><i class="fas fa-database"></i> MS Access / SQL</span>
-                                        <span class="badge"><i class="fas fa-desktop"></i> VCL Forms</span>
+                                        <span class="badge"><i class="fas fa-code" aria-hidden="true"></i> Delphi / Object Pascal</span>
+                                        <span class="badge"><i class="fas fa-database" aria-hidden="true"></i> MS Access / SQL</span>
+                                        <span class="badge"><i class="fas fa-desktop" aria-hidden="true"></i> VCL Forms</span>
                                     </div>
                                     <div class="portfolio-buttons">
-                                        <a href="#" class="btn open-project-modal" data-project="courier-management">
-                                            <i class="fas fa-external-link-alt"></i> Live Demo
+                                        <a href="#" class="btn open-project-modal" data-project="courier-management" aria-label="Open project case study for Courier Management System">
+                                            <i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo
                                         </a>
-                                        <a href="https://github.com/TRI-DevLab" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                                        <a href="https://github.com/TRI-DevLab" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="View Courier Management System code on GitHub">
+                                            <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                                        </a>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </div>
                     </div>
 
                     <!-- Search & Filter Bar -->
                     <div class="row">
-                        <div class="portfolio-filter-bar padd-15">
+                        <div class="portfolio-filter-bar padd-15" role="search" aria-label="Projects filter and search">
                             <!-- Search & Filter Inputs -->
                             <div class="search-box shadow-dark">
-                                <i class="fas fa-search"></i>
-                                <input type="text" placeholder="Search Projects..." id="project-search" onkeyup="filterProjects()">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                                <input type="text" placeholder="Search Projects..." id="project-search" aria-label="Search projects by title or keyword" onkeyup="filterProjects()">
                             </div>
                             <!-- Filter Buttons -->
-                            <div class="filter-buttons">
+                            <div class="filter-buttons" role="group" aria-label="Filter projects by category">
                                 <button class="filter-btn active" data-filter="all">All</button>
                                 <button class="filter-btn" data-filter="web">Web</button>
                                 <button class="filter-btn" data-filter="desktop">Desktop</button>
@@ -825,19 +865,19 @@
                     </div>
 
                     <!-- Project Grid -->
-                    <div class="row project-grid" id="project-grid">
+                    <div class="row project-grid" id="project-grid" aria-label="Projects list">
 
                         <!-- Project 1 -->
                         <div class="project-item padd-15" data-category="desktop python databases" data-title="student management system">
-                            <div class="project-card shadow-dark">
+                            <article class="project-card shadow-dark" aria-labelledby="proj-1-title">
                                 <!-- Project Image -->
-                                <div class="project-img-wrap">
+                                <div class="project-img-wrap" aria-hidden="true">
                                     <div class="project-thumb-placeholder"><i class="fas fa-user-graduate"></i></div>
                                 </div>
                                 <!-- Project Details -->
                                 <div class="project-info">
                                     <span class="project-cat">Desktop • Python • Databases</span>
-                                    <h4 class="project-title">Student Management System</h4>
+                                    <h4 class="project-title" id="proj-1-title">Student Management System</h4>
                                     <p>
                                         Comprehensive system for tracking student records, grades, and school administrative data.
                                     </p>
@@ -846,24 +886,26 @@
                                         <span class="badge">SQLite</span>
                                     </div>
                                     <div class="portfolio-buttons">
-                                        <a href="#" class="btn open-project-modal" data-project="student-management">Live Demo</a>
-                                        <a href="https://github.com/TRI-DevLab" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                                        <a href="#" class="btn open-project-modal" data-project="student-management" aria-label="Open case study for Student Management System">Live Demo</a>
+                                        <a href="https://github.com/TRI-DevLab" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="View Student Management System repository on GitHub">
+                                            <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                                        </a>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </div>
 
                         <!-- Project 2 -->
                         <div class="project-item padd-15" data-category="web" data-title="personal portfolio website">
-                            <div class="project-card shadow-dark">
+                            <article class="project-card shadow-dark" aria-labelledby="proj-2-title">
                                 <!-- Project Image -->
-                                <div class="project-img-wrap">
+                                <div class="project-img-wrap" aria-hidden="true">
                                     <div class="project-thumb-placeholder"><i class="fas fa-globe"></i></div>
                                 </div>
                                 <!-- Project Details -->
                                 <div class="project-info">
                                     <span class="project-cat">Web Development</span>
-                                    <h4 class="project-title">Personal Portfolio Website</h4>
+                                    <h4 class="project-title" id="proj-2-title">Personal Portfolio Website</h4>
                                     <p>
                                         A responsive and interactive portfolio showcasing my projects, skills, and professional journey.
                                     </p>
@@ -873,24 +915,26 @@
                                         <span class="badge">JavaScript</span>
                                     </div>
                                     <div class="portfolio-buttons">
-                                        <a href="#" class="btn open-project-modal" data-project="portfolio-site">Live Demo</a>
-                                        <a href="https://github.com/TRI-DevLab" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                                        <a href="#" class="btn open-project-modal" data-project="portfolio-site" aria-label="Open case study for Personal Portfolio Website">Live Demo</a>
+                                        <a href="https://github.com/TRI-DevLab" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="View Personal Portfolio Website repository on GitHub">
+                                            <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                                        </a>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </div>
 
                         <!-- Project 3 -->
                         <div class="project-item padd-15" data-category="web" data-title="weather dashboard">
-                            <div class="project-card shadow-dark">
+                            <article class="project-card shadow-dark" aria-labelledby="proj-3-title">
                                 <!-- Project Image -->
-                                <div class="project-img-wrap">
+                                <div class="project-img-wrap" aria-hidden="true">
                                     <div class="project-thumb-placeholder"><i class="fas fa-cloud-sun"></i></div>
                                 </div>
                                 <!-- Project Details -->
                                 <div class="project-info">
                                     <span class="project-cat">Web Development</span>
-                                    <h4 class="project-title">Weather Dashboard</h4>
+                                    <h4 class="project-title" id="proj-3-title">Weather Dashboard</h4>
                                     <p>
                                         A web application that provides real-time weather information and forecasts for any location.
                                     </p>
@@ -899,24 +943,26 @@
                                         <span class="badge">API Integration</span>
                                     </div>
                                     <div class="portfolio-buttons">
-                                        <a href="#" class="btn open-project-modal" data-project="portfolio-site">Live Demo</a>
-                                        <a href="https://github.com/TRI-DevLab" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                                        <a href="#" class="btn open-project-modal" data-project="portfolio-site" aria-label="Open case study for Weather Dashboard">Live Demo</a>
+                                        <a href="https://github.com/TRI-DevLab" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="View Weather Dashboard repository on GitHub">
+                                            <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                                        </a>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </div>
 
                         <!-- Project 4 -->
                         <div class="project-item padd-15" data-category="python" data-title="password manager">
-                            <div class="project-card shadow-dark">
+                            <article class="project-card shadow-dark" aria-labelledby="proj-4-title">
                                 <!-- Project Image -->
-                                <div class="project-img-wrap">
+                                <div class="project-img-wrap" aria-hidden="true">
                                     <div class="project-thumb-placeholder"><i class="fas fa-key"></i></div>
                                 </div>
                                 <!-- Project Details -->
                                 <div class="project-info">
                                     <span class="project-cat">Python Utility</span>
-                                    <h4 class="project-title">Password Manager</h4>
+                                    <h4 class="project-title" id="proj-4-title">Password Manager</h4>
                                     <p>
                                         A simple password manager application built with Python.
                                     </p>
@@ -925,24 +971,26 @@
                                         <span class="badge">Cryptography</span>
                                     </div>
                                     <div class="portfolio-buttons">
-                                        <span class="btn coming-soon-btn">Coming Soon</span>
-                                        <a href="https://github.com/TRI-DevLab" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                                        <span class="btn coming-soon-btn" aria-disabled="true">Coming Soon</span>
+                                        <a href="https://github.com/TRI-DevLab" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="View Password Manager repository on GitHub">
+                                            <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                                        </a>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </div>
 
                         <!-- Project 5 -->
                         <div class="project-item padd-15" data-category="ai" data-title="chatbot assistant">
-                            <div class="project-card shadow-dark">
+                            <article class="project-card shadow-dark" aria-labelledby="proj-5-title">
                                 <!-- Project Image -->
-                                <div class="project-img-wrap">
+                                <div class="project-img-wrap" aria-hidden="true">
                                     <div class="project-thumb-placeholder"><i class="fas fa-robot"></i></div>
                                 </div>
                                 <!-- Project Details -->
                                 <div class="project-info">
                                     <span class="project-cat">AI & Machine Learning</span>
-                                    <h4 class="project-title">Chatbot Assistant</h4>
+                                    <h4 class="project-title" id="proj-5-title">Chatbot Assistant</h4>
                                     <p>
                                         An AI-powered chatbot that can answer questions and provide assistance.
                                     </p>
@@ -951,24 +999,26 @@
                                         <span class="badge">NLP</span>
                                     </div>
                                     <div class="portfolio-buttons">
-                                        <span class="btn coming-soon-btn">Coming Soon</span>
-                                        <a href="https://github.com/TRI-DevLab" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                                        <span class="btn coming-soon-btn" aria-disabled="true">Coming Soon</span>
+                                        <a href="https://github.com/TRI-DevLab" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="View Chatbot Assistant repository on GitHub">
+                                            <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                                        </a>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </div>
 
                         <!-- Project 6 -->
                         <div class="project-item padd-15" data-category="databases" data-title="inventory management system">
-                            <div class="project-card shadow-dark">
+                            <article class="project-card shadow-dark" aria-labelledby="proj-6-title">
                                 <!-- Project Image -->
-                                <div class="project-img-wrap">
+                                <div class="project-img-wrap" aria-hidden="true">
                                     <div class="project-thumb-placeholder"><i class="fas fa-warehouse"></i></div>
                                 </div>
                                 <!-- Project Details -->
                                 <div class="project-info">
                                     <span class="project-cat">Database Management</span>
-                                    <h4 class="project-title">Inventory Management System</h4>
+                                    <h4 class="project-title" id="proj-6-title">Inventory Management System</h4>
                                     <p>
                                         A system to manage inventory levels, orders, and product data efficiently.
                                     </p>
@@ -977,11 +1027,13 @@
                                         <span class="badge">Database Design</span>
                                     </div>
                                     <div class="portfolio-buttons">
-                                        <span class="btn coming-soon-btn">Coming Soon</span>
-                                        <a href="https://github.com/TRI-DevLab" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                                        <span class="btn coming-soon-btn" aria-disabled="true">Coming Soon</span>
+                                        <a href="https://github.com/TRI-DevLab" class="btn btn-secondary" target="_blank">
+                                            <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                                        </a>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </div>
 
                     </div>
@@ -993,21 +1045,21 @@
                             <div class="roadmap-grid">
                                 <!-- Roadmap Item 1 -->
                                 <div class="roadmap-card shadow-dark">
-                                    <i class="fas fa-robot"></i>
+                                    <i class="fas fa-robot" aria-hidden="true"></i>
                                     <h4>Robotics Projects</h4>
                                     <p>Exploring robotics applications and integrating AI for autonomous systems.</p>
                                 </div>
 
                                 <!-- Roadmap Item 2 -->
                                 <div class="roadmap-card shadow-dark">
-                                    <i class="fas fa-shield-alt"></i>
+                                    <i class="fas fa-shield-alt" aria-hidden="true"></i>
                                     <h4>Cybersecurity Tools</h4>
                                     <p>Developing tools and scripts to enhance security practices and protect data.</p>
                                 </div>
 
                                 <!-- Roadmap Item 3 -->
                                 <div class="roadmap-card shadow-dark">
-                                    <i class="fas fa-brain"></i>
+                                    <i class="fas fa-brain" aria-hidden="true"></i>
                                     <h4>AI & Machine Learning</h4>
                                     <p>Implementing machine learning models for predictive analytics and automation.</p>
                                 </div>
@@ -1021,8 +1073,8 @@
                                 <h3>Explore More on GitHub</h3>
                                 <p>Check out my complete repository archive, experimental code scripts, and open-source
                                     contributions.</p>
-                                <a href="https://github.com/TRI-DevLab" class="btn" target="_blank">
-                                    <i class="fab fa-github"></i> See all my projects on GitHub
+                                <a href="https://github.com/TRI-DevLab" class="btn" target="_blank" rel="noopener noreferrer" aria-label="Visit TRI-DevLab on GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i> See all my projects on GitHub
                                 </a>
                             </div>
                         </div>
@@ -1033,7 +1085,7 @@
             <!-- ===== Portfolio Section End ===== -->
 
             <!-- ===== Blog Section Start ===== -->
-            <section class="blog section hidden" id="blog">
+            <section class="blog section hidden" id="blog" aria-label="Technical Learning Journal and Blogs">
                 <div class="container">
                     <!-- Section Header & Top Summary -->
                     <div class="row">
@@ -1053,9 +1105,9 @@
                         <div class="featured-article-wrap padd-15">
                             <h3 class="title">Featured Posts</h3>
                             <!-- Featured Article 1 -->
-                            <div class="featured-article-card shadow-dark">
+                            <article class="featured-article-card shadow-dark" aria-labelledby="featured-blog-title">
                                 <!-- Featured Article image -->
-                                <div class="featured-blog-img">
+                                <div class="featured-blog-img" aria-hidden="true">
                                     <div class="blog-img-placeholder">
                                         <i class="fas fa-laptop-code"></i>
                                         <span>Portfolio Site Build</span>
@@ -1064,11 +1116,11 @@
                                 <!-- Featured Article Content -->
                                 <div class="featured-blog-content">
                                     <div class="article-meta">
-                                        <span class="badge article-category"><i class="fas fa-globe"></i> Web Development</span>
-                                        <span class="read-time"><i class="fas fa-clock"></i> 7 min read</span>
-                                        <span class="post-date"><i class="fas fa-calendar-alt"></i> August 2026</span>
+                                        <span class="badge article-category"><i class="fas fa-globe" aria-hidden="true"></i> Web Development</span>
+                                        <span class="read-time"><i class="fas fa-clock" aria-hidden="true"></i> 7 min read</span>
+                                        <span class="post-date"><i class="fas fa-calendar-alt" aria-hidden="true"></i> August 2026</span>
                                     </div>
-                                    <h4>Building My Portfolio Site & Learning Modern Web Development</h4>
+                                    <h4 id="featured-blog-title">Building My Portfolio Site & Learning Modern Web Development</h4>
                                     <p>
                                         An in-depth writeup on how I structured, styled, and built my interactive portfolio
                                         from scratch while learning modern HTML, CSS, JavaScript, and UI accessibility principles.
@@ -1079,22 +1131,24 @@
                                         <span class="tag">#JavaScript</span>
                                         <span class="tag">#UI/UX</span>
                                     </div>
-                                    <a href="#" class="btn read-btn" data-article="portfolio-build">Read Article <i class="fas fa-arrow-right"></i></a>
+                                    <a href="#" class="btn read-btn" data-article="portfolio-build" aria-label="Read full article: Building My Portfolio Site & Learning Modern Web Development">
+                                        Read Article <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                    </a>
                                 </div>
-                            </div>
+                            </article>
                         </div>
                     </div>
 
                     <!-- Search & Category filters -->
                     <div class="row">
-                        <div class="blog-filter-bar padd-15">
+                        <div class="blog-filter-bar padd-15" role="search" aria-label="Articles filter and search">
                             <!-- Search Input -->
                             <div class="search-box shadow-dark">
-                                <i class="fas fa-search"></i>
-                                <input type="text" placeholder="Search Articles..." id="blog-search" onkeyup="filterArticles()">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                                <input type="text" placeholder="Search Articles..." id="blog-search" aria-label="Search articles by title or keyword" onkeyup="filterArticles()">
                             </div>
                             <!-- Category Filter Buttons -->
-                            <div class="filter-buttons">
+                            <div class="filter-buttons" role="group" aria-label="Filter articles by category">
                                 <button class="blog-filter-btn active" data-category="all">All</button>
                                 <button class="blog-filter-btn" data-category="programming">Programming</button>
                                 <button class="blog-filter-btn" data-category="web-dev">Web Dev</button>
@@ -1106,21 +1160,21 @@
                     </div>
 
                     <!-- Article Cards Grid -->
-                    <div class="row blog-grid" id="blog-grid">
+                    <div class="row blog-grid" id="blog-grid" aria-label="Articles list">
                         <!-- Post 1 -->
                         <div class="blog-item padd-15" data-category="projects programming"
                             data-title="lessons from courier management system">
-                            <div class="blog-card shadow-dark">
-                                <div class="blog-thumb">
+                            <article class="blog-card shadow-dark" aria-labelledby="post-1-title">
+                                <div class="blog-thumb" aria-hidden="true">
                                     <div class="thumb-icon"><i class="fas fa-shipping-fast"></i></div>
                                 </div>
                                 <div class="blog-content">
                                     <div class="article-meta">
                                         <span class="badge article-category">Projects</span>
-                                        <span class="read-time"><i class="fas fa-clock"></i> 5 min read</span>
+                                        <span class="read-time"><i class="fas fa-clock" aria-hidden="true"></i> 5 min read</span>
                                     </div>
                                     <span class="post-date">July 2026</span>
-                                    <h4>Lessons From Building a Courier Management System</h4>
+                                    <h4 id="post-1-title">Lessons From Building a Courier Management System</h4>
                                     <p>What I learned about local database indexing, data models, and UI state handling in desktop
                                         apps.</p>
                                     <div class="article-tags">
@@ -1128,25 +1182,27 @@
                                         <span class="tag">#SQLite</span>
                                         <span class="tag">#Tkinter</span>
                                     </div>
-                                    <a href="#" class="btn-link" data-article="courier-management">Read More <i class="fas fa-arrow-right"></i></a>
+                                    <a href="#" class="btn-link" data-article="courier-management" aria-label="Read more about Lessons From Building a Courier Management System">
+                                        Read More <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                    </a>
                                 </div>
-                            </div>
+                            </article>
                         </div>
             
                         <!-- Post 2 -->
                         <div class="blog-item padd-15" data-category="programming"
                             data-title="why i started learning engineering">
-                            <div class="blog-card shadow-dark">
-                                <div class="blog-thumb">
+                            <article class="blog-card shadow-dark" aria-labelledby="post-2-title">
+                                <div class="blog-thumb" aria-hidden="true">
                                     <div class="thumb-icon"><i class="fas fa-user-astronaut"></i></div>
                                 </div>
                                 <div class="blog-content">
                                     <div class="article-meta">
                                         <span class="badge article-category">Programming</span>
-                                        <span class="read-time"><i class="fas fa-clock"></i> 4 min read</span>
+                                        <span class="read-time"><i class="fas fa-clock" aria-hidden="true"></i> 4 min read</span>
                                     </div>
                                     <span class="post-date">June 2026</span>
-                                    <h4>Why I Started Learning Software Engineering</h4>
+                                    <h4 id="post-2-title">Why I Started Learning Software Engineering</h4>
                                     <p>My motivations, my self-taught learning routine, and the foundational goals driving my path
                                         into STEM.</p>
                                     <div class="article-tags">
@@ -1154,24 +1210,26 @@
                                         <span class="tag">#Career</span>
                                         <span class="tag">#Learning</span>
                                     </div>
-                                    <a href="#" class="btn-link" data-article="why-software-engineering">Read More <i class="fas fa-arrow-right"></i></a>
+                                    <a href="#" class="btn-link" data-article="why-software-engineering" aria-label="Read more about Why I Started Learning Software Engineering">
+                                        Read More <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                    </a>
                                 </div>
-                            </div>
+                            </article>
                         </div>
             
                         <!-- Post 3 -->
                         <div class="blog-item padd-15" data-category="ai" data-title="my introduction to machine learning">
-                            <div class="blog-card shadow-dark">
-                                <div class="blog-thumb">
+                            <article class="blog-card shadow-dark" aria-labelledby="post-3-title">
+                                <div class="blog-thumb" aria-hidden="true">
                                     <div class="thumb-icon"><i class="fas fa-brain"></i></div>
                                 </div>
                                 <div class="blog-content">
                                     <div class="article-meta">
                                         <span class="badge article-category">AI & Robotics</span>
-                                        <span class="read-time"><i class="fas fa-clock"></i> 6 min read</span>
+                                        <span class="read-time"><i class="fas fa-clock" aria-hidden="true"></i> 6 min read</span>
                                     </div>
                                     <span class="post-date">May 2026</span>
-                                    <h4>My Introduction to Machine Learning Concepts</h4>
+                                    <h4 id="post-3-title">My Introduction to Machine Learning Concepts</h4>
                                     <p>Key insights from my coursework exploring neural networks, datasets, and practical algorithm
                                         setups.</p>
                                     <div class="article-tags">
@@ -1179,24 +1237,26 @@
                                         <span class="tag">#Python</span>
                                         <span class="tag">#AI</span>
                                     </div>
-                                    <a href="#" class="btn-link" data-article="intro-machine-learning">Read More <i class="fas fa-arrow-right"></i></a>
+                                    <a href="#" class="btn-link" data-article="intro-machine-learning" aria-label="Read more about My Introduction to Machine Learning Concepts">
+                                        Read More <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                    </a>
                                 </div>
-                            </div>
+                            </article>
                         </div>
             
                         <!-- Post 4 -->
                         <div class="blog-item padd-15" data-category="cybersecurity" data-title="password security explained">
-                            <div class="blog-card shadow-dark">
-                                <div class="blog-thumb">
+                            <article class="blog-card shadow-dark" aria-labelledby="post-4-title">
+                                <div class="blog-thumb" aria-hidden="true">
                                     <div class="thumb-icon"><i class="fas fa-shield-alt"></i></div>
                                 </div>
                                 <div class="blog-content">
                                     <div class="article-meta">
                                         <span class="badge article-category">Cybersecurity</span>
-                                        <span class="read-time"><i class="fas fa-clock"></i> 5 min read</span>
+                                        <span class="read-time"><i class="fas fa-clock" aria-hidden="true"></i> 5 min read</span>
                                     </div>
                                     <span class="post-date">April 2026</span>
-                                    <h4>Password Security & Cryptographic Hashing</h4>
+                                    <h4 id="post-4-title">Password Security & Cryptographic Hashing</h4>
                                     <p>Exploring salt, hashing functions, and how modern authentication systems store user
                                         credentials safely.</p>
                                     <div class="article-tags">
@@ -1204,9 +1264,11 @@
                                         <span class="tag">#Hashing</span>
                                         <span class="tag">#Cryptography</span>
                                     </div>
-                                    <a href="#" class="btn-link" data-article="password-security">Read More <i class="fas fa-arrow-right"></i></a>
+                                    <a href="#" class="btn-link" data-article="password-security" aria-label="Read more about Password Security and Cryptographic Hashing">
+                                        Read More <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                    </a>
                                 </div>
-                            </div>
+                            </article>
                         </div>
 
                     </div>
@@ -1215,12 +1277,12 @@
                     <div class="row">
                         <div class="blog-newsletter padd-15 shadow-dark">
                             <div class="newsletter-content">
-                                <h3><i class="fas fa-envelope-open-text"></i> Stay Connected</h3>
+                                <h3><i class="fas fa-envelope-open-text" aria-hidden="true"></i> Stay Connected</h3>
                                 <p>Follow along with my latest learning milestones, project updates, and articles as I publish them.
                                 </p>
                                 <form class="newsletter-form"
                                     onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
-                                    <input type="email" placeholder="Enter your email..." required>
+                                    <input type="email" placeholder="Enter your email..." aria-label="Email address for newsletter subscription" required>
                                     <button type="submit" class="btn">Subscribe</button>
                                 </form>
                             </div>
@@ -1231,7 +1293,7 @@
             <!-- ===== Blog Section End ===== -->
 
             <!-- ===== Contact Section Start ===== -->
-            <section class="contact section hidden" id="contact">
+            <section class="contact section hidden" id="contact" aria-label="Contact Information and Inquiry Form">
                 <div class="container">
                     <!-- Section Header & Summary -->
                     <div class="row">
@@ -1292,8 +1354,8 @@
                                 
                                     <!-- Submit Button -->
                                     <button type="submit" class="btn submit-btn" id="submit-btn">
-                                        <span class="btn-text">Send Message <i class="fas fa-paper-plane"></i></span>
-                                        <span class="btn-spinner hidden"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+                                        <span class="btn-text">Send Message <i class="fas fa-paper-plane" aria-hidden="true"></i></span>
+                                        <span class="btn-spinner hidden"><i class="fas fa-spinner fa-spin" aria-hidden="true"></i> Sending...</span>
                                     </button>
                                 
                                     <!-- Form Status Feedback Box -->
@@ -1307,7 +1369,7 @@
             
                             <!-- Status Badge -->
                             <div class="status-card shadow-dark">
-                                <span class="status-indicator"></span>
+                                <span class="status-indicator" aria-hidden="true"></span>
                                 <div class="status-content">
                                     <h4>Currently Open To</h4>
                                     <p>Collaboration • Internships • Software Projects • Networking</p>
@@ -1318,7 +1380,7 @@
                             <div class="info-cards-list">
             
                                 <div class="info-card shadow-dark">
-                                    <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                                    <div class="info-icon" aria-hidden="true"><i class="fas fa-envelope"></i></div>
                                     <div class="info-details">
                                         <h5>Email</h5>
                                         <a href="mailto:tri.devlab@gmail.com">tri.devlab@gmail.com</a>
@@ -1326,7 +1388,7 @@
                                 </div>
             
                                 <div class="info-card shadow-dark">
-                                    <div class="info-icon"><i class="fab fa-github"></i></div>
+                                    <div class="info-icon" aria-hidden="true"><i class="fab fa-github"></i></div>
                                     <div class="info-details">
                                         <h5>GitHub</h5>
                                         <a href="https://github.com/TRI-DevLab" target="_blank">github.com/TRI-DevLab</a>
@@ -1334,7 +1396,7 @@
                                 </div>
             
                                 <div class="info-card shadow-dark">
-                                    <div class="info-icon"><i class="fab fa-linkedin"></i></div>
+                                    <div class="info-icon" aria-hidden="true"><i class="fab fa-linkedin"></i></div>
                                     <div class="info-details">
                                         <h5>LinkedIn</h5>
                                         <a href="https://www.linkedin.com/in/tri-bam" target="_blank">linkedin.com/in/tri-bam</a>
@@ -1342,7 +1404,7 @@
                                 </div>
             
                                 <div class="info-card shadow-dark">
-                                    <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <div class="info-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div>
                                     <div class="info-details">
                                         <h5>Location</h5>
                                         <p>South Africa</p>
@@ -1355,8 +1417,9 @@
                             <div class="cv-cta-box shadow-dark">
                                 <h4>Need my résumé?</h4>
                                 <p>Get a complete copy of my background, qualifications, and coursework.</p>
-                                <a href="files/TRI_CV.pdf" class="btn" target="_blank"><i class="fas fa-download"></i> Download
-                                    CV</a>
+                                <a href="files/TRI_CV.pdf" class="btn" target="_blank" rel="noopener noreferrer" aria-label="Download CV (PDF document)">
+                                    <i class="fas fa-download" aria-hidden="true"></i> Download CV
+                                </a>
                             </div>
             
                         </div>
@@ -1366,7 +1429,7 @@
             <!-- ===== Contact Section End ===== -->
 
             <!-- ===== Footer Start ===== -->
-            <footer class="footer">
+            <footer class="footer" role="contentinfo">
                 <div class="container">
 
                     <!-- Main Footer Row -->
@@ -1381,7 +1444,7 @@
                                 "Treating every project as an experiment in precision—mastering software fundamentals today to engineer the autonomous platforms of tomorrow."
                             </p>
                             <div class="footer-quote">
-                                <i class="fas fa-quote-left"></i>
+                                <i class="fas fa-quote-left" aria-hidden="true"></i>
                                 <span>"The best way to predict the future is to invent it."</span>
                             </div>
                         </div>
@@ -1390,13 +1453,13 @@
                         <div class="footer-col padd-15">
                             <h4 class="footer-title">Quick Links</h4>
                             <ul class="footer-links">
-                                <li><a href="#home"><i class="fas fa-angle-right"></i> Home</a></li>
-                                <li><a href="#about"><i class="fas fa-angle-right"></i> About</a></li>
-                                <li><a href="#journey"><i class="fas fa-angle-right"></i> Journey</a></li>
-                                <li><a href="#skills"><i class="fas fa-angle-right"></i> Skills</a></li>
-                                <li><a href="#portfolio"><i class="fas fa-angle-right"></i> Portfolio</a></li>
-                                <li><a href="#blog"><i class="fas fa-angle-right"></i> Learning Journal</a></li>
-                                <li><a href="#contact"><i class="fas fa-angle-right"></i> Contact</a></li>
+                                <li><a href="#home"><i class="fas fa-angle-right" aria-hidden="true"></i> Home</a></li>
+                                <li><a href="#about"><i class="fas fa-angle-right" aria-hidden="true"></i> About</a></li>
+                                <li><a href="#journey"><i class="fas fa-angle-right" aria-hidden="true"></i> Journey</a></li>
+                                <li><a href="#skills"><i class="fas fa-angle-right" aria-hidden="true"></i> Skills</a></li>
+                                <li><a href="#portfolio"><i class="fas fa-angle-right" aria-hidden="true"></i> Portfolio</a></li>
+                                <li><a href="#blog"><i class="fas fa-angle-right" aria-hidden="true"></i> Learning Journal</a></li>
+                                <li><a href="#contact"><i class="fas fa-angle-right" aria-hidden="true"></i> Contact</a></li>
                             </ul>
                         </div>
             
@@ -1404,10 +1467,10 @@
                         <div class="footer-col padd-15">
                             <h4 class="footer-title">Resources</h4>
                             <ul class="footer-links">
-                                <li><a href="files/TRI_CV.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Download CV</a></li>
-                                <li><a href="#journey"><i class="fas fa-certificate"></i> Certificates</a></li>
-                                <li><a href="#blog"><i class="fas fa-book-open"></i> Learning Journal</a></li>
-                                <li><a href="https://github.com/TRI-DevLab" target="_blank"><i class="fab fa-github-alt"></i> GitHub
+                                <li><a href="files/TRI_CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV"><i class="fas fa-file-pdf" aria-hidden="true"></i> Download CV</a></li>
+                                <li><a href="#journey"><i class="fas fa-certificate" aria-hidden="true"></i> Certificates</a></li>
+                                <li><a href="#blog"><i class="fas fa-book-open" aria-hidden="true"></i> Learning Journal</a></li>
+                                <li><a href="https://github.com/TRI-DevLab" target="_blank" rel="noopener noreferrer" aria-label="TRI-DevLab GitHub Repositories"><i class="fab fa-github-alt" aria-hidden="true"></i> GitHub
                                         Repos</a></li>
                             </ul>
                         </div>
@@ -1416,17 +1479,20 @@
                         <div class="footer-col padd-15">
                             <h4 class="footer-title">Connect</h4>
                             <div class="footer-socials">
-                                <a href="https://github.com/TRI-DevLab" target="_blank" title="GitHub"><i
-                                        class="fab fa-github"></i></a>
-                                <a href="https://www.linkedin.com/in/tri-bam" target="_blank" title="LinkedIn"><i
-                                        class="fab fa-linkedin"></i></a>
-                                <a href="mailto:tri.devlab@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                                <a href="https://www.youtube.com/@TRI-DevLab" target="_blank" title="YouTube"><i
-                                        class="fab fa-youtube"></i></a>
+                                <a href="https://github.com/TRI-DevLab" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" title="GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/tri-bam" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" title="LinkedIn">
+                                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                                <a href="mailto:tri.devlab@gmail.com" aria-label="Send Email" title="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                                <a href="https://www.youtube.com/@TRI-DevLab" target="_blank" rel="noopener noreferrer" aria-label="YouTube channel" title="YouTube">
+                                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                                </a>
                             </div>
             
                             <div class="footer-status">
-                                <span class="status-dot"></span>
+                                <span class="status-dot" aria-hidden="true"></span>
                                 <span>Open to Collaboration & Internships</span>
                             </div>
                         </div>
@@ -1442,13 +1508,13 @@
                             <p>&copy; <span id="footer-year">2026</span> Triumphant Bamitale. All Rights Reserved.</p>
                         </div>
                         <div class="built-with">
-                            <p>Built with <i class="fas fa-heart"></i> using <span>HTML</span> • <span>CSS</span> •
+                            <p>Built with <i class="fas fa-heart" aria-hidden="true"></i> using <span>HTML</span> • <span>CSS</span> •
                                 <span>JavaScript</span>
                             </p>
                         </div>
                         <div class="back-to-top">
-                            <a href="#home" id="back-to-top-btn" title="Back to top">
-                                Back to Top <i class="fas fa-arrow-up"></i>
+                            <a href="#home" id="back-to-top-btn" aria-label="Back to top of page" title="Back to top">
+                                Back to Top <i class="fas fa-arrow-up" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
@@ -1463,10 +1529,10 @@
     <!-- ===== Main Container End ===== -->
     
     <!-- ===== Style Switcher Start ===== -->
-    <div class="style-switcher shadow-dark">
+    <div class="style-switcher shadow-dark" aria-label="Theme Customization Panel">
         <!-- Toggle Gear Button -->
-        <button class="style-switcher-toggler s-icon" aria-label="Toggle Theme Settings">
-            <i class="fas fa-cog fa-spin"></i>
+        <button class="style-switcher-toggler s-icon" aria-label="Toggle Theme Settings" aria-haspopup="true">
+            <i class="fas fa-cog fa-spin" aria-hidden="true"></i>
         </button>
 
         <!-- Panel Content -->
@@ -1475,29 +1541,29 @@
         <!-- 1. Navigation Position -->
         <div class="switcher-item">
             <label>Nav Position:</label>
-            <div class="nav-position-options">
-                <button class="nav-pos-btn active" data-pos="left">Left</button>
-                <button class="nav-pos-btn" data-pos="right">Right</button>
+            <div class="nav-position-options" role="group" aria-labelledby="nav-pos-label">
+                <button class="nav-pos-btn active" data-pos="left" aria-pressed="true">Left</button>
+                <button class="nav-pos-btn" data-pos="right" aria-pressed="false">Right</button>
             </div>
         </div>
 
         <!-- 2. Dark / Light Mode Toggle -->
         <div class="switcher-item">
             <label>Theme Mode:</label>
-            <div class="day-night s-icon" role="button" aria-label="Toggle Dark and Light Mode">
-                <i class="fas fa-moon"></i>
+            <div class="day-night s-icon" role="button" aria-labelledby="theme-mode-label" aria-label="Toggle Dark and Light Mode">
+                <i class="fas fa-moon" aria-hidden="true"></i>
             </div>
         </div>
 
         <!-- 3. Skin Color Switcher -->
         <div class="switcher-item">
             <label>Accent Colors:</label>
-            <div class="colors">
-                <span class="color-dot active" data-color="#ec1839" style="background: #ec1839;"></span>
-                <span class="color-dot" data-color="#fa5b0f" style="background: #fa5b0f;"></span>
-                <span class="color-dot" data-color="#37b182" style="background: #37b182;"></span>
-                <span class="color-dot" data-color="#1854b4" style="background: #1854b4;"></span>
-                <span class="color-dot" data-color="#a118ec" style="background: #a118ec;"></span>
+            <div class="colors" role="radiogroup" aria-labelledby="skin-color-label">
+                <span class="color-dot active" data-color="#ec1839" style="background: #ec1839;" role="radio" aria-checked="true" aria-label="Crimson Red Accent"></span>
+                <span class="color-dot" data-color="#fa5b0f" style="background: #fa5b0f;" role="radio" aria-checked="false" aria-label="Orange Accent"></span>
+                <span class="color-dot" data-color="#37b182" style="background: #37b182;" role="radio" aria-checked="false" aria-label="Green Accent"></span>
+                <span class="color-dot" data-color="#1854b4" style="background: #1854b4;" role="radio" aria-checked="false" aria-label="Blue Accent"></span>
+                <span class="color-dot" data-color="#a118ec" style="background: #a118ec;" role="radio" aria-checked="false" aria-label="Purple Accent"></span>
             </div>
         </div>
 
@@ -1505,12 +1571,12 @@
     <!-- ===== Style Switcher End ===== -->
 
     <!-- ===== Full Blog Article View Overlay Start ===== -->
-    <div class="blog-reader-overlay hidden" id="blog-reader">
+    <div class="blog-reader-overlay hidden" id="blog-reader" role="dialog" aria-modal="true" aria-labelledby="reader-title">
         <div class="blog-reader-container shadow-dark">
             <!-- Reader Navigation Header -->
             <div class="reader-header">
                 <button class="btn btn-secondary back-to-blog-btn" id="close-blog-reader">
-                    <i class="fas fa-arrow-left"></i> Back to Journal
+                    <i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Journal
                 </button>
                 <span class="reader-badge" id="reader-category">Category</span>
             </div>
@@ -1520,9 +1586,9 @@
                 <div class="article-header">
                     <h1 id="reader-title">Article Title</h1>
                     <div class="article-meta">
-                        <span><i class="fas fa-calendar-alt"></i> <span id="reader-date">Date</span></span>
-                        <span><i class="fas fa-clock"></i> <span id="reader-time">5 min read</span></span>
-                        <span><i class="fas fa-user"></i> Triumphant Bamitale</span>
+                        <span><i class="fas fa-calendar-alt" aria-hidden="true"></i> <span id="reader-date">Date</span></span>
+                        <span><i class="fas fa-clock" aria-hidden="true"></i> <span id="reader-time">5 min read</span></span>
+                        <span><i class="fas fa-user" aria-hidden="true"></i> Triumphant Bamitale</span>
                     </div>
                 </div>
     
@@ -1541,9 +1607,9 @@
     <!-- ===== Full Blog Article View Overlay End ===== -->
 
     <!-- ===== Project Details Modal Start ===== -->
-    <div class="project-modal" id="project-modal">
+    <div class="project-modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title-target">
         <div class="modal-content shadow-dark">
-            <span class="close-modal" id="close-modal">&times;</span>
+            <span class="close-modal" id="close-modal" aria-label="Close Project Details Dialog">&times;</span>
             <div class="modal-body" id="modal-body">
                 <!-- Content will be injected dynamically via JS -->
             </div>
